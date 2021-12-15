@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <editableResource createdTimestamp="1611939687794" createdUser="Admin"
     id="-2f178e75:1774eeb3b20:-7dba" type="test_resource"
-    updatedTimestamp="1639566532617" updatedUser="Admin" version="1.1">
+    updatedTimestamp="1639577336960" updatedUser="Admin" version="1.1">
     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
     <resourceConfig description="" name="">
         <testTree>
@@ -9,7 +9,7 @@
                 selfDescribing="The comment actions enable you to add notes."
                 type="comment_action" version="1.0">
                 <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
-                <resourceConfig description="Test for git" html="false" name="Test for git"/>
+                <resourceConfig description="Test for git1" html="false" name="Test for git1"/>
             </editableResource>
             <editableResource id="-2f178e75:1774eeb3b20:-7db8"
                 selfDescribing="Publish a message and wait for a response to be received.  This can then be validated accordingly."
