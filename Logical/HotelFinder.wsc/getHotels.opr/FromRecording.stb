@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <editableResource createdTimestamp="1600277226750" createdUser="Admin"
     id="-6e55b030:174973e5173:-7d3a" type="stub_resource"
-    updatedTimestamp="1600277472073" updatedUser="Admin" version="1.1">
+    updatedTimestamp="1639577531510" updatedUser="Admin" version="1.1">
     <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
     <resourceConfig description="" name="">
         <testTree>
@@ -132,7 +132,7 @@
                                     <setFilter path="/text/soapenv:Envelope/soapenv:Body/getHotels/city/{}">
                                     <fieldAction type="1">
                                     <fieldAction
-                                    exp="Barcelona" type="0"/>
+                                    exp="Barcelon" type="0"/>
                                     </fieldAction>
                                     </setFilter>
                                     <setFilter path="/text/soapenv:Envelope/soapenv:Body/getHotels/from/xsi:type">
@@ -273,7 +273,7 @@
                                     </fieldAction>
                                     </fieldActionGroup>
                                     <_c meTy="String"
-                                    name="Content-Type"
+                                    name="content-type"
                                     sch="Http Subscribe"
                                     type="7" version="1.2">
                                     <filterActionGroup>
@@ -286,7 +286,7 @@
                                     </filterActionGroup>
                                     </_c>
                                     <_c meTy="String"
-                                    name="Pragma"
+                                    name="pragma"
                                     sch="Http Subscribe"
                                     type="7" version="1.2">
                                     <filterActionGroup>
@@ -299,7 +299,7 @@
                                     </filterActionGroup>
                                     </_c>
                                     <_c meTy="String"
-                                    name="SOAPAction"
+                                    name="soapaction"
                                     sch="Http Subscribe"
                                     type="7" version="1.2">
                                     <filterActionGroup>
@@ -632,8 +632,10 @@
         <tagDataStore identifier="-6e55b030:174973e5173:-7cae"
             inputMode="NONE" outputMode="NONE"/>
         <testprops messageClearance="false"/>
-        <stubprops behaviourStyle="ONE_TO_ONE" majorVersion="1"
-            messageClearance="false" minorVersion="0" optimise="false" wrks="10">
+        <stubprops behaviourStyle="ONE_TO_ONE"
+            includeContractValidationOption="false" majorVersion="1"
+            messageClearance="false" minorVersion="0" optimise="false"
+            sendErrorResponseOption="false" wrks="10">
             <responseTimeTable>
                 <entry key="-6e55b030:174973e5173:-7ec7:-817575104:-807255066">
                     <value type="NO_DELAY"/>
