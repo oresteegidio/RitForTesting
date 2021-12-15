@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <editableResource createdTimestamp="1600277226750" createdUser="Admin"
     id="-6e55b030:174973e5173:-7d3a" type="stub_resource"
-    updatedTimestamp="1639577531510" updatedUser="Admin" version="1.1">
+    updatedTimestamp="1639578240646" updatedUser="Admin" version="1.1">
     <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
     <resourceConfig description="" name="">
         <testTree>
@@ -132,7 +132,7 @@
                                     <setFilter path="/text/soapenv:Envelope/soapenv:Body/getHotels/city/{}">
                                     <fieldAction type="1">
                                     <fieldAction
-                                    exp="Barcelon" type="0"/>
+                                    exp="Barcelona" type="0"/>
                                     </fieldAction>
                                     </setFilter>
                                     <setFilter path="/text/soapenv:Envelope/soapenv:Body/getHotels/from/xsi:type">
