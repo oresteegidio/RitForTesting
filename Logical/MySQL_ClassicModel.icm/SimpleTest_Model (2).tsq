@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621411266024" createdUser="Admin"
+    id="5b0789f9:1797af1516f:-7bb7" type="test_resource"
+    updatedTimestamp="1621492845108" updatedUser="Admin" version="1.1">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig description="" name="">
+        <testTree>
+            <editableResource id="54431c28:17983a75b0f:-7900"
+                selfDescribing="The SQL Query action is used for executing an SQL SELECT statement against the selected database connection. Query results may be validated or stored using the Assert and Store tabs; sample result sets may be configured by running the query using the Test button."
+                type="sql_query_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig assertCellResults="false"
+                    assertColumnResults="false"
+                    callableStatement="false" description=""
+                    interval="0"
+                    name="&quot;select count(*) from customers&quot;"
+                    repeat="false"
+                    sqlStatement="select count(*) from customers"
+                    timeOffset="3600000" timeout="0" validateTypes="false">
+                    <dbserverid id="5b0789f9:1797af1516f:-7e01"
+                        lkname="MySQL_ClassicModel"
+                        lkpath="MySQL_ClassicModel" type="infrastructure_component_resource"/>
+                    <dataModel>
+                        <_c columnName="count(*)" columnType="3">
+                            <columnData name="count(*)" type="3" version="1.2"/>
+                            <_c type="3" version="1.2">
+                                <fieldActionGroup>
+                                    <fieldAction type="1">
+                                    <fieldAction exp="122" type="0"/>
+                                    </fieldAction>
+                                    <fieldAction
+                                    description="Store copy of field in tag 'newTag'"
+                                    tN="NumeroRigheTabelle" type="2">
+                                    <dataAction type="Copy"/>
+                                    </fieldAction>
+                                </fieldActionGroup>
+                            </_c>
+                        </_c>
+                    </dataModel>
+                </resourceConfig>
+            </editableResource>
+            <editableResource id="54431c28:17983a75b0f:-78b9"
+                selfDescribing="The log actions enables you to output messages to console and a logging file."
+                type="logging_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig append="true" description=""
+                    flush="true"
+                    loggingMessage="NumeroRigheTabelle=%%NumeroRigheTabelle%%"
+                    name="NumeroRigheTabelle=%%NumeroRigheTabelle%%"
+                    outputFile="" role="0"/>
+            </editableResource>
+            <editableResource id="54431c28:17983a75b0f:-7aae"
+                selfDescribing="Iterate over a test data set"
+                type="iterate_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" disableMappings="false"
+                    iterationContributor="false" maxIterationTime="0.0"
+                    maxIterationTimeExceededFailsTest="false"
+                    maxTotalIterationTime="0.0"
+                    maxTotalIterationTimeExceededFailsTest="false"
+                    name=" over DS_Model1" option="NOTHING"
+                    pacingtime="0.0" pacingtype="MIN_DURATION"
+                    performanceDisableValidation="false"
+                    performanceInstances="1"
+                    performanceInterleave="false"
+                    performanceMaximumIterationTime="0"
+                    performanceMaximumTestTime="0"
+                    performanceUseMaximumIterationTime="false"
+                    performanceUseMaximumTestTime="false" remoteAgent=""
+                    reportingLogIterations="1"
+                    reportingLogLogMessages="8" reportingLogMessages="4"
+                    reportingLogScriptExitCodes="8"
+                    reportingLogScriptOutput="8"
+                    reportingLogTagValues="8" reportingLogTimes="8"
+                    runSettingsContinueOnFail="false"
+                    runSettingsDelayEnabled="false"
+                    runSettingsDelayType="Fixed Delay"
+                    runSettingsIterations=""
+                    runSettingsMaximumDelayValue="0"
+                    runSettingsMinimumDelayValue="0"
+                    runSettingsRunFor="0" runSettingsRunType="Once Only"
+                    runSettingsTestDescription="" type="script:Chai"
+                    useMaxIterationTime="false"
+                    useMaxTotalIterationTime="false" usepacing="false">
+                    <testDataSetReference
+                        id="54431c28:17983a75b0f:-7779"
+                        lkname="DS_Model1"
+                        lkpath="MySQL_ClassicModel1/DS_Model1" type="db_test_data"/>
+                    <mapper disableFiltersWhenEmpty="false"
+                        knownColumns="country,city,contactFirstName,postalCode,salesRepEmployeeNumber,customerNumber,customerName,phone,addressLine1,creditLimit,contactLastName,addressLine2,state" noAutoMap="">
+                        <mapping columnName="customerNumber"
+                            tagName="CustomerNumber" type="4"/>
+                        <mapping tagName="NumeroRigheTabelle" type="0"/>
+                        <mapping columnName="contactLastName"
+                            tagName="contactLastName" type="4"/>
+                        <mapping columnName="customerName"
+                            tagName="customerName" type="4"/>
+                    </mapper>
+                    <testTree>
+                        <editableResource
+                            id="54431c28:17983a75b0f:-79c6"
+                            selfDescribing="The log actions enables you to output messages to console and a logging file."
+                            type="logging_action" version="1.0">
+                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                            <resourceConfig append="true" description=""
+                                flush="true"
+                                loggingMessage="customerNumber=%%CustomerNumber%% ******* %%customerName%% ******* %%contactLastName%%"
+                                name="customerNumber=%%CustomerNumber%% ******* %%customerName%% ******* %%contactLastName%%"
+                                outputFile="" role="0"/>
+                        </editableResource>
+                        <editableResource
+                            id="54431c28:17983a75b0f:-762a"
+                            selfDescribing="Use a value from the current run to extract information from a test data set."
+                            type="test_data_lookup_action" version="1.0">
+                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                            <resourceConfig description=""
+                                enabled="false" name="Search &quot;DS_Model&quot; in &quot;contactLastName&quot; and in &quot;customerName&quot; and for &quot;%%CustomerNumber%%&quot; in &quot;customerNumber&quot;">
+                                <true id="54431c28:17983a75b0f:-7629"
+                                    selfDescribing="Found"
+                                    type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description=""
+                                    name="" path="0">
+                                    <editableResource
+                                    id="54431c28:17983a75b0f:-758c"
+                                    selfDescribing="The log actions enables you to output messages to console and a logging file."
+                                    type="logging_action" version="1.0">
+                                    <loggingConfiguration
+                                    debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig
+                                    append="true"
+                                    description=""
+                                    flush="true"
+                                    loggingMessage="Dati %%CustomerNumber%% *** %%customerName%% *** %%contactLastName%%  TROVATI"
+                                    name="Dati %%CustomerNumber%% *** %%customerName%% *** %%contactLastName%%  TROVATI"
+                                    outputFile="" role="0"/>
+                                    </editableResource>
+                                    </resourceConfig>
+                                </true>
+                                <false id="54431c28:17983a75b0f:-7628"
+                                    selfDescribing="Not Found"
+                                    type="test_data_lookup_path_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig description=""
+                                    name="" path="1">
+                                    <editableResource
+                                    id="54431c28:17983a75b0f:-75df"
+                                    selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console."
+                                    type="fail_action" version="1.0">
+                                    <loggingConfiguration
+                                    debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig
+                                    append="true"
+                                    description=""
+                                    flush="true"
+                                    loggingMessage="Non trovato dati"
+                                    name="Non trovato dati" outputFile=""/>
+                                    </editableResource>
+                                    </resourceConfig>
+                                </false>
+                                <props allMatches="false">
+                                    <tdsref
+                                    id="5b0789f9:1797af1516f:-7bd1"
+                                    lkname="DS_Model"
+                                    lkpath="MySQL_ClassicModel/DS_Model" type="db_test_data"/>
+                                    <lookups column="contactLastName" lookupValue="%%contactLastName%%"/>
+                                    <lookups column="customerName" lookupValue="%%customerName%%"/>
+                                    <lookups column="customerNumber" lookupValue="%%CustomerNumber%%"/>
+                                </props>
+                                <mapper disableFiltersWhenEmpty="false"
+                                    knownColumns="country,city,contactFirstName,postalCode,salesRepEmployeeNumber,customerNumber,customerName,phone,addressLine1,creditLimit,contactLastName,addressLine2,state" noAutoMap="contactLastName,customerNumber,customerName">
+                                    <mapping columnName="customerNumber"
+                                    tagName="CustomerNumber" type="4"/>
+                                    <mapping
+                                    columnName="contactLastName"
+                                    tagName="contactLastName" type="4"/>
+                                    <mapping columnName="customerName"
+                                    tagName="customerName" type="4"/>
+                                </mapper>
+                            </resourceConfig>
+                        </editableResource>
+                    </testTree>
+                </resourceConfig>
+            </editableResource>
+        </testTree>
+        <tagDataStore inputMode="SELECT" outputMode="SELECT">
+            <tag defaultValue="" description="" name="CustomerNumber"/>
+            <tag defaultValue="" description="" name="customerName"/>
+            <tag defaultValue="" description="" name="contactLastName"/>
+            <tag defaultValue="" description="" name="NumeroRigheTabelle">
+                <tagProps>
+                    <prop key="interfaceInput" value="true"/>
+                    <prop key="interfaceOutput" value="true"/>
+                </tagProps>
+            </tag>
+        </tagDataStore>
+        <testprops messageClearance="false"/>
+    </resourceConfig>
+</editableResource>

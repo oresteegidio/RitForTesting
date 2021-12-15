@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438931872469" createdUser="NL052772" id="6160515:14f06f9fbac:-7d19" type="test_resource" updatedTimestamp="1438931872469" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-180f704b:14f06f4ff63:-7e5a" selfDescribing="Specify commands, scripts or programs to execute, either locally or on a remote machine.  Optionally specify assertions on the output and/or store it into tags." type="run_command_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig command="ping %%host%% -n 1" description="" killAfter="Test" killProcess="false" name="&quot;ping %%host%% -n 1&quot;" waitUntilComplete="true">
+               <remote connectionType="LOCAL" host="" password="#com.ghc.1!1809" user="" userType="TAGGED" workingDir=""/>
+               <fieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+                  <fieldAction description="Store copy of field in tag 'output'" tN="output" type="2">
+                     <dataAction type="Copy"/>
+                  </fieldAction>
+               </fieldActionGroup>
+               <stdErrFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </stdErrFieldActionGroup>
+               <exitCodeFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </exitCodeFieldActionGroup>
+               <executeUser enabled="false" method="SU"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="6160515:14f06f9fbac:-7e70" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%output%%" name="%%output%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="6160515:14f06f9fbac:-7e51" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="ipaddr=getData(output,&quot;[&quot;,&quot;]&quot;);&#13;&#10;tvalue=getData(output,&quot;Average = &quot;,&quot;ms&quot;);&#13;&#10;&#13;&#10;function getData(source,left,right) {&#13;&#10;&#9;var p1=source.indexOf(left)+left.length;&#13;&#10;&#9;var p2=source.indexOf(right,p1);&#13;&#10;&#9;return source.substr(p1,p2-p1);&#13;&#10;}" name="Run &quot;ipaddr=getData(output,&quot;[&quot;,&quot;]&quot;);&#13;&#10;tvalue=getData(output,&quot;Average = &quot;,&quot;ms&quot;);&#13;&#10;&#13;&#10;function getData(source,left,right) {&#13;&#10;&#9;var p1=source.indexOf(left)+left.length;&#13;&#10;&#9;var p2=source.indexOf(right,p1);&#13;&#10;&#9;return source.substr(p1,p2-p1);&#13;&#10;}&quot;"/>
+         </editableResource>
+         <editableResource id="6160515:14f06f9fbac:-7e23" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="IPAddr: %%ipaddr%%&#10;Time: %%tvalue%%" name="IPAddr: %%ipaddr%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="6160515:14f06f9fbac:-7dde" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;ipaddr&quot;]==&quot;188.93.150.34&quot;" option="OTHER" script="tags[&quot;ipaddr&quot;]==&quot;188.93.150.34&quot;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="tvalue"/>
+         <tag defaultValue="business.vanlint5.nl" description="" name="host"/>
+         <tag defaultValue="" description="" name="ipaddr"/>
+         <tag defaultValue="" description="" name="output"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

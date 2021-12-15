@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437847926168" createdUser="NL052772" id="-1638db71:14ec66636d0:-7e89" type="test_resource" updatedTimestamp="1437850834323" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-1638db71:14ec66636d0:-7e4b" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Input&quot;]=&quot;My sister Dana is 21 and not 66 years old.&quot;;" name="Run &quot;tags[&quot;Input&quot;]=&quot;My sister Dana is 21 and not 66 years old.&quot;;&quot;"/>
+         </editableResource>
+         <editableResource id="-1638db71:14ec66636d0:-7e47" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="// Search value after sister. Try \d+ &#13;&#10;var Data2=/My sister \w+ /.exec(Input);&#13;&#10;tags.Data0 = Data2[0].replace(&quot;My sister&quot;,&quot;&quot;).trim();" name="Run &quot;// Search value after sister. Try \d+ &#13;&#10;var Data2=/My sister \w+ /.exec(Input);&#13;&#10;tags.Data0 = Data2[0].replace(&quot;My sister&quot;,&quot;&quot;).trim();&quot;"/>
+         </editableResource>
+         <editableResource id="-1638db71:14ec66636d0:-7e43" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%Data0%%" name="%%Data0%%" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="Data"/>
+         <tag defaultValue="" description="" name="Input"/>
+         <tag defaultValue="" description="" name="Data0"/>
+         <tag defaultValue="" description="" name="Data1"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

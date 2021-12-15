@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1603301861225" createdUser="Admin"
+    id="540d889e:1754c361690:-7e25"
+    selfDescribing="www.mayoral.com (2.16.22.99)"
+    type="host_machine_resource" updatedTimestamp="1603301861225"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig host_address="2.16.22.99" user_host_name="www.mayoral.com">
+        <roles>
+            <identity name="ssh" port="22"/>
+        </roles>
+    </resourceConfig>
+</editableResource>

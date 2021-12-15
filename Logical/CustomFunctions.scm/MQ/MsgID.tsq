@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437232010311" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-6f20" type="test_resource" updatedTimestamp="1437244262660" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-6ee4" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Msgid&quot;]=MsgID( -4 );" name="Run &quot;tags[&quot;Msgid&quot;]=MsgID( -4 );&quot;"/>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-76ef" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%Msgid%%" name="%%Msgid%% (2)" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-76f2" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Msgid&quot;]=MsgID(  );" name="Run &quot;tags[&quot;Msgid&quot;]=MsgID(  );&quot; (2)"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6ee0" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%Msgid%%" name="%%Msgid%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6ebb" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;Msgid&quot;].length==20" option="OTHER" script="tags[&quot;Msgid&quot;].length==20" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-6eba" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-6e75" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Msgid&quot;]=MsgID( 25 );" name="Run &quot;tags[&quot;Msgid&quot;]=MsgID( 25 );&quot;"/>
+                     </editableResource>
+                     <editableResource id="-178c8b0f:14e9d01043d:-6e72" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="%%Msgid%%" name="%%Msgid%% (2)" outputFile="" role="0"/>
+                     </editableResource>
+                     <editableResource id="-178c8b0f:14e9d01043d:-6e63" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig description="" name="tags[&quot;Msgid&quot;].length==25" option="OTHER" script="tags[&quot;Msgid&quot;].length==25" type="script:ECMAScript">
+                           <true id="-178c8b0f:14e9d01043d:-6e62" selfDescribing="True" type="decision_path_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" name="" path="0">
+                                 <editableResource id="-178c8b0f:14e9d01043d:-6e61" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig append="true" description="" flush="true" loggingMessage="MsgID" name="MsgID" outputFile=""/>
+                                 </editableResource>
+                              </resourceConfig>
+                           </true>
+                           <false id="-178c8b0f:14e9d01043d:-6e5e" selfDescribing="False" type="decision_path_action" version="1.0">
+                              <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                              <resourceConfig description="" name="" path="1">
+                                 <editableResource id="-178c8b0f:14e9d01043d:-6e5d" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                    <resourceConfig append="true" description="" flush="true" loggingMessage="Length 25 failed!" name="Length 25 failed!" outputFile=""/>
+                                 </editableResource>
+                              </resourceConfig>
+                           </false>
+                        </resourceConfig>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-6eb9" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-6eb1" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Default length of 20 failed" name="Default length of 20 failed" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="Msgid"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

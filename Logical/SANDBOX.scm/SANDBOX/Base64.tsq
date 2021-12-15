@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437122675266" createdUser="NL052772" id="154584c1:14e9a8c56a2:-7daa" type="test_resource" updatedTimestamp="1437131534910" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="154584c1:14e9a8c56a2:-7d6e" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;NAME&quot;]=&quot;Marc van Lint&quot;" name="Run &quot;tags[&quot;NAME&quot;]=&quot;Marc van Lint&quot;&quot;"/>
+         </editableResource>
+         <editableResource id="154584c1:14e9a8c56a2:-7d62" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%NAME%%" name="%%NAME%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="154584c1:14e9a8c56a2:-7d6a" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;NAME&quot;]=encodeBase64( tags[&quot;NAME&quot;] )" name="Run &quot;tags[&quot;NAME&quot;]=encodeBase64( tags[&quot;NAME&quot;] )&quot;"/>
+         </editableResource>
+         <editableResource id="154584c1:14e9a8c56a2:-7d5f" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%NAME%%" name="%%NAME%% (2)" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="154584c1:14e9a8c56a2:-7d66" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;NAME&quot;]=decodeBase64( tags[&quot;NAME&quot;] )" name="Run &quot;tags[&quot;NAME&quot;]=decodeBase64( tags[&quot;NAME&quot;] )&quot;"/>
+         </editableResource>
+         <editableResource id="154584c1:14e9a8c56a2:-7937" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%NAME%%" name="%%NAME%% (2)" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="NAME"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

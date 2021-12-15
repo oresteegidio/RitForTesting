@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621408484572" createdUser="Admin"
+    id="5b0789f9:1797af1516f:-7c49"
+    selfDescribing="Unknown database (MySQL_ClassicModel1) [, ]"
+    type="database_connection_resource" updatedTimestamp="1621408484572"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig maxConnections="" poolName="DefaultPoolName" transportName="MySQL_ClassicModel1">
+        <connectionParams ZOSEnv="false"
+            dpsHost="http://&lt;hostname>:&lt;port>/api/v1/profile"
+            dpsPass="#com.ghc.1!730f" dpsUser="" driverClass=""
+            password="#com.ghc.1!b944" schema="" url="" user="">
+            <dpsSsl useSsl="false"/>
+            <stubSettings maxProcCallCount="10000"
+                maxResultSetRowCount="10000" maxRowCount="10000"
+                password="#com.ghc.1!8418"
+                procedureLearningBehaviour="1" schema="" url=""
+                useIntegratedDB="true" useSsl="false" user=""/>
+            <storedProcedureFilter catalogFilterEnabled="false"
+                catalogFilterPattern="" procedureFilterEnabled="false"
+                procedureFilterPattern="" schemaFilterEnabled="true"
+                schemaFilterPattern=""
+                storedProceduresRetrievalEnabled="false" useConnectionUsername="true"/>
+            <timestampFormatting timestampFormatZero="false"
+                timestampFormattingEnabled="false" timestampPrecision="9"/>
+        </connectionParams>
+    </resourceConfig>
+</editableResource>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437235679780" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-5f99" type="test_resource" updatedTimestamp="1437235727626" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-5f5d" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="printConsole( &quot;A simple message to the console&quot; );" name="Run &quot;printConsole( &quot;A simple message to the console&quot; );&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-5f30" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Check the console log. Start RIT with -consoleLog" name="Check the console log. Start RIT with -consoleLog" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+   </resourceConfig>
+</editableResource>

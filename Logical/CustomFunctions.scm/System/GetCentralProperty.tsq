@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1436541289424" createdUser="NL052772" id="48617a90:14e7885ea3d:-7ebd" type="test_resource" updatedTimestamp="1437838377594" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-30155fea:14e97dd5ebc:-7e78" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="Get MQ property" eval_type="Mozilla Rhino" function="// It uses a config.properties which is stored as part of the project.&#10;// mq.mydomain.myenv.system1.system2=A.SYSTEM2.Transaction_Request.LQ&#10;tags[&quot;propFile&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;//config//config.properties&quot;;&#10;tags[&quot;propFile&quot;]=cleanFileSeparator( tags[&quot;propFile&quot;] );&#10;tags[&quot;propVariable&quot;]=&quot;mq.mydomain.myenv.system1.system2&quot;;&#10;tags[&quot;propValue&quot;]=getCentralProperty(tags[&quot;propVariable&quot;],tags[&quot;propFile&quot;]);" name="Run &quot;// It uses a config.properties which is stored as part of the project.&#10;// mq.mydomain.myenv.system1.system2=A.SYSTEM2.Transaction_Request.LQ&#10;tags[&quot;propFile&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;//config//config.properties&quot;;&#10;tags[&quot;propFile&quot;]=cleanFileSeparator( tags[&quot;propFile&quot;] );&#10;tags[&quot;propVariable&quot;]=&quot;mq.mydomain.myenv.system1.system2&quot;;&#10;tags[&quot;propValue&quot;]=getCentralProperty(tags[&quot;propVariable&quot;],tags[&quot;propFile&quot;]);&quot;"/>
+         </editableResource>
+         <editableResource id="-30155fea:14e97dd5ebc:-7da6" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Properties&#10;File: %%propFile%%&#10;Variable: %%propVariable%%&#10;Value: %%propValue%%" name="Properties" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6982" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;propValue&quot;]==&quot;A.SYSTEM2.Transaction_Request.LQ&quot;" option="OTHER" script="tags[&quot;propValue&quot;]==&quot;A.SYSTEM2.Transaction_Request.LQ&quot;" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-6981" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-697c" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="GetCentralProperty" name="GetCentralProperty" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-6980" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-6978" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="GetCentralProperty" name="GetCentralProperty (2)" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="propValue"/>
+         <tag description="" name="listFiles"/>
+         <tag defaultValue="" description="" name="fSize"/>
+         <tag defaultValue="" description="" name="listFiles2"/>
+         <tag defaultValue="" description="" name="propVariable"/>
+         <tag defaultValue="" description="" name="propFile"/>
+         <tag defaultValue="" description="" name="NAME-TYPE"/>
+         <tag defaultValue="" description="" name="name1"/>
+         <tag defaultValue="name0" description="" name="name0"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

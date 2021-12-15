@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437123876768" createdUser="NL052772" id="154584c1:14e9a8c56a2:-7c96" type="test_resource" updatedTimestamp="1437235859049" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="154584c1:14e9a8c56a2:-7c5a" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;inputDir&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;];&#10;listFiles=directoryList( tags[&quot;inputDir&quot;] );" name="Run &quot;tags[&quot;inputDir&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;];&#10;listFiles=directoryList( tags[&quot;inputDir&quot;] );&quot;"/>
+         </editableResource>
+         <editableResource id="154584c1:14e9a8c56a2:-7c30" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%inputDir%%&#13;&#10;%%listFiles%%" name="%%inputDir%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="154584c1:14e9a8c56a2:-7c56" selfDescribing="Repeat test steps a number of times. Each iteration must be explicitly listed e.g. 1,5,7-12." type="repeat_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" disableMappings="false" iterationContributor="false" maxIterationTime="0.0" maxIterationTimeExceededFailsTest="false" maxTotalIterationTime="0.0" maxTotalIterationTimeExceededFailsTest="false" name="%%listFiles%%" option="NOTHING" pacingtime="0.0" pacingtype="MIN_DURATION" performanceDisableValidation="false" performanceInstances="1" performanceInterleave="false" performanceMaximumIterationTime="0" performanceMaximumTestTime="0" performanceUseMaximumIterationTime="false" performanceUseMaximumTestTime="false" remoteAgent="" reportingLogIterations="1" reportingLogLogMessages="8" reportingLogMessages="4" reportingLogScriptExitCodes="8" reportingLogScriptOutput="8" reportingLogTagValues="8" reportingLogTimes="8" runSettingsContinueOnFail="true" runSettingsDelayEnabled="false" runSettingsDelayType="Fixed Delay" runSettingsIterations="%%listFiles%%" runSettingsMaximumDelayValue="0" runSettingsMinimumDelayValue="0" runSettingsRunFor="0" runSettingsRunType="Once Only" runSettingsTestDescription="" type="script:ECMAScript" useMaxIterationTime="false" useMaxTotalIterationTime="false" usepacing="false">
+               <mapper disableFiltersWhenEmpty="false" knownColumns=""/>
+               <testTree>
+                  <editableResource id="154584c1:14e9a8c56a2:-7c52" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="" eval_type="Mozilla Rhino" function="var i=tags[&quot;TEST/ITERATION/NUMBER&quot;]-1;&#13;&#10;tags[&quot;file&quot;]=listFiles.get(i);" name="Run &quot;var i=tags[&quot;TEST/ITERATION/NUMBER&quot;]-1;&#13;&#10;tags[&quot;file&quot;]=listFiles.get(i);&quot;"/>
+                  </editableResource>
+                  <editableResource id="154584c1:14e9a8c56a2:-7c4e" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig append="true" description="" flush="true" loggingMessage="File %%TEST/ITERATION/NUMBER%% %%file%%" name="File %%TEST/ITERATION/NUMBER%% %%file%%" outputFile="" role="0"/>
+                  </editableResource>
+               </testTree>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-74a9" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="listFiles.get(2)==&quot;CustomFunctions.ghp&quot;" option="OTHER" script="listFiles.get(2)==&quot;CustomFunctions.ghp&quot;" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-74a8" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-74a3" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="DirectoryList" name="DirectoryList" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-74a7" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-749f" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="DirectoryList&#10;CustomFunctions.ghp does not exists." name="DirectoryList (2)" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="listFiles"/>
+         <tag defaultValue="" description="" name="inputDir"/>
+         <tag defaultValue="" description="" name="file"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

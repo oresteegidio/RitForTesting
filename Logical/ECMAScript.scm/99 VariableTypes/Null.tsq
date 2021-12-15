@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437843228146" createdUser="NL052772" id="-2eedf4e2:14ec5cef4c5:-77eb" type="test_resource" updatedTimestamp="1437843973940" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-77a9" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="// Assign integer 0 value&#13;&#10;tags[&quot;Value&quot;]=0;" name="Run &quot;// Assign integer 0 value&#13;&#10;tags[&quot;Value&quot;]=0;&quot;"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-777b" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Assigne integer value 0&#10;tags[&quot;Value&quot;}= %%Value%%" name="Assigne integer value 0" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7778" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="// Assign string &quot;0&quot; value&#13;&#10;tags[&quot;Value&quot;]=&quot;0&quot;;" name="Run &quot;// Assign string &quot;0&quot; value&#13;&#10;tags[&quot;Value&quot;]=&quot;0&quot;;&quot;"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7775" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Assign string value &quot;0&quot;&#10;tags[&quot;Value&quot;}= %%Value%%" name="Assign string value &quot;0&quot;" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7770" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="// This is comparison with value 0&#13;&#10;tags[&quot;Value2&quot;]=( tags[&quot;Value&quot;]==0 );" name="Run &quot;// This is comparison with value 0&#13;&#10;tags[&quot;Value2&quot;]=( tags[&quot;Value&quot;]==0 );&quot;"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-776d" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Compare value&#10;tags[&quot;Value2&quot;]= %%Value2%%" name="Compare value" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7768" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="// Nullify the variable Value.&#13;&#10;tags[&quot;Value&quot;]=null;" name="Run &quot;// Nullify the variable Value.&#13;&#10;tags[&quot;Value&quot;]=null;&quot;"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7767" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Null value assigned&#10;tags[&quot;Value&quot;]= %%Value%%" name="Null value assigned" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="Value"/>
+         <tag defaultValue="" description="" name="Value2"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

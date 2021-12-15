@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1600341263550" createdUser="Admin"
+    id="605fd930:1749bbbd4ca:-7d63"
+    selfDescribing="MQ_Travel - MQ Queue Manager null@null@null:1414"
+    type="mq_transport" updatedTimestamp="1600341263550"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig transportName="MQ_Travel" transportTemplateName="IBM Websphere MQ"/>
+</editableResource>

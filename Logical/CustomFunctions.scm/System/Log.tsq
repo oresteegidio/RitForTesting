@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437233822032" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-65c7" type="test_resource" updatedTimestamp="1437290983321" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-655d" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="Set LogFile" eval_type="Mozilla Rhino" function="// Might be a good practice to identify a logfile variable base on the testname.&#10;logFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\&quot;+tags[&quot;TEST/NAME&quot;]+&quot;.log&quot; );" name="Run &quot;// Might be a good practice to identify a logfile variable base on the testname.&#10;logFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\&quot;+tags[&quot;TEST/NAME&quot;]+&quot;.log&quot; );&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6561" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="This is a log message.&#10;The logfile is: %%logFile%%" name="This is a log message." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6559" selfDescribing="Specify commands, scripts or programs to execute, either locally or on a remote machine.  Optionally specify assertions on the output and/or store it into tags." type="run_command_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig command="del %%logFile%%" description="" killAfter="Test" killProcess="false" name="&quot;del %%logFile%%&quot;" waitUntilComplete="true">
+               <remote connectionType="LOCAL" host="" password="#com.ghc.1!35e7" user="" userType="TAGGED" workingDir=""/>
+               <fieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+               <stdErrFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </stdErrFieldActionGroup>
+               <exitCodeFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </exitCodeFieldActionGroup>
+               <executeUser enabled="false" method="SU"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-654a" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="This is a dummy line...&#10;A sleep is now executed." name="This is a dummy line..." outputFile="%%logFile%%" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-64bf" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="2000" name="for 2000ms"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-64c3" selfDescribing="Specify commands, scripts or programs to execute, either locally or on a remote machine.  Optionally specify assertions on the output and/or store it into tags." type="run_command_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig command="del %%logFile%%" description="" killAfter="Test" killProcess="false" name="&quot;del %%logFile%%&quot; (2)" waitUntilComplete="true">
+               <remote connectionType="LOCAL" host="" password="#com.ghc.1!35e7" user="" userType="TAGGED" workingDir=""/>
+               <fieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+               <stdErrFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </stdErrFieldActionGroup>
+               <exitCodeFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </exitCodeFieldActionGroup>
+               <executeUser enabled="false" method="SU"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6499" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="log( &quot;This message goes only to the console&quot; );&#13;&#10;log( &quot;This message is also stored in the log-file&quot;,tags[&quot;logFile&quot;]);" name="Run &quot;log( &quot;This message goes only to the console&quot; );&#13;&#10;log( &quot;This message is also stored in the log-file&quot;,tags[&quot;logFile&quot;]);&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6495" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="2000" name="for 2000ms (2)"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6491" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;logSize&quot;]=fileSize( tags[&quot;logFile&quot;] );" name="Run &quot;tags[&quot;logSize&quot;]=fileSize( tags[&quot;logFile&quot;] );&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-54ed" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Nearly at the end of the test..." name="Nearly at the end of the test..." outputFile="" role="1"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6487" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;logSize&quot;]==45" option="OTHER" script="tags[&quot;logSize&quot;]==45" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-6486" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-6479" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Log passed." name="Log passed." outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-6485" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-6481" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Logfile size is incorrect.&#10;Filesize %%logSize%%&#10;The log-error will result in a failing test." name="Logfile size is incorrect. (2)" outputFile="" role="2"/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="logSize"/>
+         <tag defaultValue="" description="" name="logFile"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621617206755"
+    createdUser="STUART.WALKER" id="1373abdf:1798f1d61a2:-7b7a"
+    type="test_resource" updatedTimestamp="1621944821624"
+    updatedUser="Admin" version="1.1">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig description="" name="">
+        <testTree>
+            <editableResource id="1373abdf:1798f1d61a2:-7aaa"
+                selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data."
+                type="function_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" eval_type="Legacy"
+                    function="XMLdbQuery(&quot;MySQL_ClassicModel&quot;, &quot;select * from customers;&quot;)" name="Run &quot;XMLdbQuery(&quot;MySQL_ClassicModel&quot;, &quot;select * from customers;&quot;)&quot;, store into&quot;XML DB Output&quot;">
+                    <fieldActionGroup>
+                        <fieldAction
+                            description="Store copy of field in tag 'newTag'"
+                            tN="XML DB Output" type="2">
+                            <dataAction type="Copy"/>
+                        </fieldAction>
+                    </fieldActionGroup>
+                </resourceConfig>
+            </editableResource>
+            <editableResource id="1373abdf:1798f1d61a2:-7a22"
+                selfDescribing="The log actions enables you to output messages to console and a logging file."
+                type="logging_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig append="true" description=""
+                    flush="true" loggingMessage="%%XML DB Output%%"
+                    name="%%XML DB Output%%" outputFile="" role="0"/>
+            </editableResource>
+            <editableResource id="6c1ceedc:1799d937251:-7e44"
+                selfDescribing="Maps the value of a tag(&quot;Input&quot;) onto another tag(&quot;Output&quot;). The mapping is defined in the specified XSLT stylesheet."
+                type="mapper_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig BaseUri="" description=""
+                    in="XML DB Output"
+                    loc="%%SYSTEM_PROJECT_ROOT%%XMLtoCSV.xsl"
+                    locType="101"
+                    name="From&quot;XML DB Output&quot; to&quot;CSV Output&quot; using stylesheet&quot;%%SYSTEM_PROJECT_ROOT%%XMLtoCSV.xsl&quot;"
+                    out="CSV Output" useBaseUri="false"/>
+            </editableResource>
+            <editableResource id="1373abdf:1798f1d61a2:-7a00"
+                selfDescribing="The log actions enables you to output messages to console and a logging file."
+                type="logging_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig append="false" description=""
+                    flush="true" loggingMessage="%%CSV Output%%"
+                    name="%%CSV Output%%"
+                    outputFile="%%PROJECT/ROOT%%\output.csv" role="0"/>
+            </editableResource>
+        </testTree>
+        <tagDataStore inputMode="NONE" outputMode="NONE">
+            <tag defaultValue="" description="" name="address_2"/>
+            <tag
+                defaultValue="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&lt;root>&lt;stuff>blah ablh ablh&lt;/stuff>&lt;/root>"
+                description="" name="XML DB Output"/>
+            <tag defaultValue="" description="" name="address_id"/>
+            <tag defaultValue="" description="" name="phone"/>
+            <tag defaultValue="" description="" name="district"/>
+            <tag defaultValue="" description="" name="city_id"/>
+            <tag defaultValue="" description="" name="A"/>
+            <tag defaultValue="" description="" name="B"/>
+            <tag defaultValue="" description="" name="C"/>
+            <tag
+                defaultValue="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>"
+                description="" name="xmldeclaration"/>
+            <tag defaultValue="" description="" name="CSV Output"/>
+            <tag defaultValue="" description="" name="address"/>
+            <tag defaultValue="" description="" name="postal_code"/>
+        </tagDataStore>
+        <testprops messageClearance="false"/>
+    </resourceConfig>
+</editableResource>

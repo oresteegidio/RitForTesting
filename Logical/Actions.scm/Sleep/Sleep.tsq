@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438934711413" createdUser="NL052772" id="45f54b70:14f072ae7ba:-7ad8" type="test_resource" updatedTimestamp="1438934797143" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="45f54b70:14f072ae7ba:-7a92" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;wait&quot;]=&quot;80000&quot;;" name="Run &quot;tags[&quot;wait&quot;]=&quot;80000&quot;;&quot;"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7a9a" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="1000" name="for 1000ms"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7a96" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Wait for %%wait%% ms ..." name="Wait for %%wait%% ms ..." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7a88" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="%%wait%%" name="for %%wait%%ms"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7a8c" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="End" name="End" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="wait"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

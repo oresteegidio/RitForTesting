@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1624887974024" createdUser="Admin"
+    id="64d8a186:17a52d0766e:-7be0" selfDescribing="patt File Schema"
+    type="file_schema" updatedTimestamp="1624887974024"
+    updatedUser="Admin" version="2.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig schemaSourceTemplateName="File Schema">
+        <schemaSourceConfig name="patt" packetsToIgnoreAtStart="0">
+            <settings packetiserType="Split" writeEnabled="true">
+                <packetiserConfig firstSplitOnly="false" newLine="true"
+                    processLastEmptyPacket="false" splitToken="" writeLastPacketWithToken="false"/>
+            </settings>
+            <record id="e6010d67-d08b-47a7-a1f0-dd50e27d7a0d"
+                nodeFormatterID="record_layout" rootID="Record" schemaID="64d8a186:17a52d0766e:-7bdf"/>
+        </schemaSourceConfig>
+    </resourceConfig>
+</editableResource>

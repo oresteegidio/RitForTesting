@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1623834673091" createdUser="GGuaita"
+    id="-2f461b09:17a13d37f2e:-6cd4" type="test_resource"
+    updatedTimestamp="1624888170639" updatedUser="Admin" version="1.1">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig description="" name="">
+        <testTree>
+            <editableResource id="64d8a186:17a52d0766e:-7c29"
+                selfDescribing="Compares two logical file sources (both of which may be directories containing files) containing record data according to the configuration you set-up."
+                type="file_compare_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" name="patt against patt"
+                    reportingMissinLeft="true" reportingMissingRight="true">
+                    <leftSource filePath="%%PROJECT/ROOT_DIRECTORY%%/Output/jbfbxpat01-2021-06-21-10.43.21.973-886062da-a961-41db-9a02-98ba810c4879.BFTBPATT.csv">
+                        <sourceRef id="-43dae821:17a438ac9cc:-7d11"
+                            lkname="patt" lkpath="patt" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="1624887810696874" lastKnownName="BFPATT_KABI"/>
+                        </keyColumns>
+                    </leftSource>
+                    <rightSource filePath="%%PROJECT/ROOT_DIRECTORY%%/Output/jbfbxpat01-2021-06-21-10.43.21.973-886062da-a961-41db-9a02-98ba810c4879.BFTBPATT.old.csv">
+                        <sourceRef id="-43dae821:17a438ac9cc:-7d11"
+                            lkname="patt" lkpath="patt" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="1624887810696874" lastKnownName="BFPATT_KABI"/>
+                        </keyColumns>
+                    </rightSource>
+                    <comparisons>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="1624887938116875" lastKnownName="BFPATT_SOCIETA"/>
+                            <rightComparisonColumn
+                                lastKnownId="1624887938116875" lastKnownName="BFPATT_SOCIETA"/>
+                        </comparison>
+                    </comparisons>
+                    <logging config="FULL" filename="true"
+                        rowsAfterFilter="true" rowsBeforeFilter="true"
+                        rowsMissingInLhs="true" rowsMissingInRhs="true" rowsWithDifferences="true"/>
+                </resourceConfig>
+            </editableResource>
+            <editableResource id="788aa60f:17522539702:-6ab1"
+                selfDescribing="The log actions enables you to output messages to console and a logging file."
+                type="logging_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig append="true" description=""
+                    enabled="false" flush="true"
+                    loggingMessage="Valid BFTBPATT data&#xa;%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATT.csv&#xa;%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATT.old.csv&#xa;"
+                    name="Valid BFTBPATT data"
+                    outputFile="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryLog%%/%%lk_testName%%.log" role="0"/>
+            </editableResource>
+            <editableResource id="-ca5e77a:17a38f1dfd8:-1c15"
+                selfDescribing="Compares two logical file sources (both of which may be directories containing files) containing record data according to the configuration you set-up."
+                type="file_compare_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" enabled="false"
+                    name="bftbpatt rispetto a bftbpatt.old"
+                    reportingMissinLeft="true" reportingMissingRight="true">
+                    <leftSource filePath="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATT.csv">
+                        <sourceRef id="-403aa327:17a38ea241a:-7df5"
+                            lkname="bftbpatt" lkpath="bftbpatt" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940705" lastKnownName="BFPATT_KABI"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940706" lastKnownName="BFPATT_SOCIETA"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940708" lastKnownName="BFPATT_PROG"/>
+                        </keyColumns>
+                    </leftSource>
+                    <rightSource filePath="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATT.old.csv">
+                        <sourceRef id="-557c0987:17a39381acf:-7dcd"
+                            lkname="bftbpatt.old" lkpath="bftbpatt" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940705" lastKnownName="BFPATT_KABI"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940706" lastKnownName="BFPATT_SOCIETA"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940708" lastKnownName="BFPATT_PROG"/>
+                        </keyColumns>
+                    </rightSource>
+                    <comparisons>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940709" lastKnownName="BFPATT_INDEX"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940709" lastKnownName="BFPATT_INDEX"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940710" lastKnownName="BFPATT_KCONTO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940710" lastKnownName="BFPATT_KCONTO"/>
+                        </comparison>
+                    </comparisons>
+                    <logging config="FULL" filename="true"
+                        rowsAfterFilter="true" rowsBeforeFilter="true"
+                        rowsMissingInLhs="true" rowsMissingInRhs="true" rowsWithDifferences="true"/>
+                </resourceConfig>
+            </editableResource>
+            <editableResource id="-47ddb53f:17a1425d6f1:-575e"
+                selfDescribing="Compares two logical file sources (both of which may be directories containing files) containing record data according to the configuration you set-up."
+                type="file_compare_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" enabled="false"
+                    name="bftbpatt rispetto a bftbpatt"
+                    reportingMissinLeft="true" reportingMissingRight="true">
+                    <leftSource filePath="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATT.csv">
+                        <sourceRef id="-403aa327:17a38ea241a:-7df5"
+                            lkname="bftbpatt" lkpath="bftbpatt" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940705" lastKnownName="BFPATT_KABI"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940706" lastKnownName="BFPATT_SOCIETA"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940708" lastKnownName="BFPATT_PROG"/>
+                        </keyColumns>
+                    </leftSource>
+                    <rightSource filePath="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATT.old.csv">
+                        <sourceRef id="-403aa327:17a38ea241a:-7df5"
+                            lkname="bftbpatt" lkpath="bftbpatt" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940705" lastKnownName="BFPATT_KABI"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940706" lastKnownName="BFPATT_SOCIETA"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438129513940708" lastKnownName="BFPATT_PROG"/>
+                        </keyColumns>
+                    </rightSource>
+                    <comparisons>
+                        <comparison comparisonType="EQUALITY" threshold="">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940709" lastKnownName="BFPATT_INDEX"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940709" lastKnownName="BFPATT_INDEX"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940710" lastKnownName="BFPATT_KCONTO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940710" lastKnownName="BFPATT_KCONTO"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY" threshold="">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940711" lastKnownName="BFPATT_VPATR"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940711" lastKnownName="BFPATT_VPATR"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940712" lastKnownName="BFPATT_VTIT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940712" lastKnownName="BFPATT_VTIT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY" threshold="">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940713" lastKnownName="BFPATT_VLIQ"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940713" lastKnownName="BFPATT_VLIQ"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940714" lastKnownName="BFPATT_GIACM"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940714" lastKnownName="BFPATT_GIACM"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129513940715" lastKnownName="BFPATT_QTESENTE"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129513940715" lastKnownName="BFPATT_QTESENTE"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040716" lastKnownName="BFPATT_GIACIRR"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040716" lastKnownName="BFPATT_GIACIRR"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040717" lastKnownName="BFPATT_NUMEIRR"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040717" lastKnownName="BFPATT_NUMEIRR"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040718" lastKnownName="BFPATT_GGIRR"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040718" lastKnownName="BFPATT_GGIRR"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040719" lastKnownName="BFPATT_CONFT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040719" lastKnownName="BFPATT_CONFT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040720" lastKnownName="BFPATT_CONFL"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040720" lastKnownName="BFPATT_CONFL"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040721" lastKnownName="BFPATT_PRELT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040721" lastKnownName="BFPATT_PRELT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040722" lastKnownName="BFPATT_PRELL"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040722" lastKnownName="BFPATT_PRELL"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040723" lastKnownName="BFPATT_PATRMED"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040723" lastKnownName="BFPATT_PATRMED"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040724" lastKnownName="BFPATT_INTERESSI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040724" lastKnownName="BFPATT_INTERESSI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040725" lastKnownName="BFPATT_COMMG"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040725" lastKnownName="BFPATT_COMMG"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040726" lastKnownName="BFPATT_COMMI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040726" lastKnownName="BFPATT_COMMI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040727" lastKnownName="BFPATT_COMMD"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040727" lastKnownName="BFPATT_COMMD"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040728" lastKnownName="BFPATT_COMMP"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040728" lastKnownName="BFPATT_COMMP"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040729" lastKnownName="BFPATT_COMMO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040729" lastKnownName="BFPATT_COMMO"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040730" lastKnownName="BFPATT_COMMR"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040730" lastKnownName="BFPATT_COMMR"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040731" lastKnownName="BFPATT_SPESEG"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040731" lastKnownName="BFPATT_SPESEG"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040732" lastKnownName="BFPATT_SPESEAI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040732" lastKnownName="BFPATT_SPESEAI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040733" lastKnownName="BFPATT_COMMAI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040733" lastKnownName="BFPATT_COMMAI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514040734" lastKnownName="BFPATT_OADD"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514040734" lastKnownName="BFPATT_OADD"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140735" lastKnownName="BFPATT_PACC"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140735" lastKnownName="BFPATT_PACC"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140736" lastKnownName="BFPATT_LEVA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140736" lastKnownName="BFPATT_LEVA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140737" lastKnownName="BFPATT_GG"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140737" lastKnownName="BFPATT_GG"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140738" lastKnownName="BFPATT_RENDL"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140738" lastKnownName="BFPATT_RENDL"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140739" lastKnownName="BFPATT_RENDN"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140739" lastKnownName="BFPATT_RENDN"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140740" lastKnownName="BFPATT_NCREND"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140740" lastKnownName="BFPATT_NCREND"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140746" lastKnownName="BFPATT_BENCHA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140746" lastKnownName="BFPATT_BENCHA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140742" lastKnownName="BFPATT_NCBENCH"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140742" lastKnownName="BFPATT_NCBENCH"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140743" lastKnownName="BFPATT_RENDLA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140743" lastKnownName="BFPATT_RENDLA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140744" lastKnownName="BFPATT_RENDNA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140744" lastKnownName="BFPATT_RENDNA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140745" lastKnownName="BFPATT_NCRENDA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140745" lastKnownName="BFPATT_NCRENDA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140746" lastKnownName="BFPATT_BENCHA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140746" lastKnownName="BFPATT_BENCHA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140747" lastKnownName="BFPATT_NCBENCHA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140747" lastKnownName="BFPATT_NCBENCHA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140748" lastKnownName="BFPATT_DTULT_ACQ"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140748" lastKnownName="BFPATT_DTULT_ACQ"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140749" lastKnownName="BFPATT_DTULT_VEN"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140749" lastKnownName="BFPATT_DTULT_VEN"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140750" lastKnownName="BFPATT_I461"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140750" lastKnownName="BFPATT_I461"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140751" lastKnownName="BFPATT_I461MAT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140751" lastKnownName="BFPATT_I461MAT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140752" lastKnownName="BFPATT_BENCHS"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140752" lastKnownName="BFPATT_BENCHS"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140753" lastKnownName="BFPATT_NCBENCHS"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140753" lastKnownName="BFPATT_NCBENCHS"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140754" lastKnownName="BFPATT_BENCHAS"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140754" lastKnownName="BFPATT_BENCHAS"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140755" lastKnownName="BFPATT_NCBENCHAS"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140755" lastKnownName="BFPATT_NCBENCHAS"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140756" lastKnownName="BFPATT_RENDNNI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140756" lastKnownName="BFPATT_RENDNNI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140757" lastKnownName="BFPATT_RENDNALI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140757" lastKnownName="BFPATT_RENDNALI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140758" lastKnownName="BFPATT_COMMPMAT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140758" lastKnownName="BFPATT_COMMPMAT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140759" lastKnownName="BFPATT_COMMOMAT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140759" lastKnownName="BFPATT_COMMOMAT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140760" lastKnownName="BFPATT_BOLLI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140760" lastKnownName="BFPATT_BOLLI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140761" lastKnownName="BFPATT_COMMV"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140761" lastKnownName="BFPATT_COMMV"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140762" lastKnownName="BFPATT_IVA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140762" lastKnownName="BFPATT_IVA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140763" lastKnownName="BFPATT_IVADADD"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140763" lastKnownName="BFPATT_IVADADD"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140764" lastKnownName="BFPATT_SPESE_IA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140764" lastKnownName="BFPATT_SPESE_IA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140765" lastKnownName="BFPATT_COMM_IA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140765" lastKnownName="BFPATT_COMM_IA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514140766" lastKnownName="BFPATT_IMPO_IA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514140766" lastKnownName="BFPATT_IMPO_IA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240767" lastKnownName="BFPATT_PROV_IA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240767" lastKnownName="BFPATT_PROV_IA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240768" lastKnownName="BFPATT_COMMZ"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240768" lastKnownName="BFPATT_COMMZ"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240769" lastKnownName="BFPATT_IVAG"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240769" lastKnownName="BFPATT_IVAG"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240770" lastKnownName="BFPATT_IVAI"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240770" lastKnownName="BFPATT_IVAI"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240771" lastKnownName="BFPATT_IVAD"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240771" lastKnownName="BFPATT_IVAD"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240772" lastKnownName="BFPATT_IVAP"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240772" lastKnownName="BFPATT_IVAP"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240773" lastKnownName="BFPATT_IVAO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240773" lastKnownName="BFPATT_IVAO"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240774" lastKnownName="BFPATT_IVAR"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240774" lastKnownName="BFPATT_IVAR"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240775" lastKnownName="BFPATT_IVAS"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240775" lastKnownName="BFPATT_IVAS"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240776" lastKnownName="BFPATT_RENDLF"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240776" lastKnownName="BFPATT_RENDLF"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240777" lastKnownName="BFPATT_RENDLFA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240777" lastKnownName="BFPATT_RENDLFA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240778" lastKnownName="BFPATT_VPATR_LA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240778" lastKnownName="BFPATT_VPATR_LA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240779" lastKnownName="BFPATT_VPATR_L"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240779" lastKnownName="BFPATT_VPATR_L"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240780" lastKnownName="BFPATT_RG_LA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240780" lastKnownName="BFPATT_RG_LA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240781" lastKnownName="BFPATT_RG_L"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240781" lastKnownName="BFPATT_RG_L"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240782" lastKnownName="BFPATT_COMMC"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240782" lastKnownName="BFPATT_COMMC"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240783" lastKnownName="BFPATT_IVAC"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240783" lastKnownName="BFPATT_IVAC"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240784" lastKnownName="BFPATT_DATA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240784" lastKnownName="BFPATT_DATA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240785" lastKnownName="BFPATT_CONF_DA_SWT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240785" lastKnownName="BFPATT_CONF_DA_SWT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240786" lastKnownName="BFPATT_PREL_DA_SWT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240786" lastKnownName="BFPATT_PREL_DA_SWT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240787" lastKnownName="BFPATT_FL_RIC_OP_P"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240787" lastKnownName="BFPATT_FL_RIC_OP_P"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240788" lastKnownName="BFPATT_FL_RIC_OP_A"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240788" lastKnownName="BFPATT_FL_RIC_OP_A"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240789" lastKnownName="BFPATT_FL_RIC_OP_G"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240789" lastKnownName="BFPATT_FL_RIC_OP_G"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240790" lastKnownName="BFPATT_TTAXM"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240790" lastKnownName="BFPATT_TTAXM"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240791" lastKnownName="BFPATT_SPCUS"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240791" lastKnownName="BFPATT_SPCUS"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240792" lastKnownName="BFPATT_IVASPCUS"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240792" lastKnownName="BFPATT_IVASPCUS"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240793" lastKnownName="BFPATT_SPEC"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240793" lastKnownName="BFPATT_SPEC"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438129514240794" lastKnownName="BFPATT_IVASPEC"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438129514240794" lastKnownName="BFPATT_IVASPEC"/>
+                        </comparison>
+                    </comparisons>
+                    <logging config="FULL" filename="true"
+                        rowsAfterFilter="true" rowsBeforeFilter="true"
+                        rowsMissingInLhs="true" rowsMissingInRhs="true" rowsWithDifferences="true"/>
+                </resourceConfig>
+                <editableResource id="-47ddb53f:17a1425d6f1:-3f9c"
+                    selfDescribing="Failure Path"
+                    type="failure_path_action" version="1.0">
+                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                    <resourceConfig description="" name="">
+                        <editableResource
+                            id="-47ddb53f:17a1425d6f1:-3ccb"
+                            selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data."
+                            type="function_action" version="1.0">
+                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                            <resourceConfig description=""
+                                eval_type="Mozilla Rhino"
+                                function="xx_exitCode = 1;" name="Esegui &quot;xx_exitCode = 1;&quot;"/>
+                        </editableResource>
+                    </resourceConfig>
+                </editableResource>
+            </editableResource>
+            <editableResource id="788aa60f:17522539702:-6a43"
+                selfDescribing="The log actions enables you to output messages to console and a logging file."
+                type="logging_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig append="true" description=""
+                    flush="true"
+                    loggingMessage="Valid BFTBPATD data&#xa;"
+                    name="Valid BFTBPATD data"
+                    outputFile="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryLog%%/%%lk_testName%%.log" role="0"/>
+            </editableResource>
+            <editableResource id="-2f461b09:17a13d37f2e:-6aa0"
+                selfDescribing="Compares two logical file sources (both of which may be directories containing files) containing record data according to the configuration you set-up."
+                type="file_compare_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" enabled="false"
+                    name="bftbpatd rispetto a bftbpatd"
+                    reportingMissinLeft="true" reportingMissingRight="true">
+                    <leftSource filePath="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATD.csv">
+                        <sourceRef id="-403aa327:17a38ea241a:-7d5c"
+                            lkname="bftbpatd" lkpath="bftbpatd" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438136440244869" lastKnownName="BFPATD_KABI"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438136440244870" lastKnownName="BFPATD_SOCIETA"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438136440244872" lastKnownName="BFPATD_PROG"/>
+                        </keyColumns>
+                    </leftSource>
+                    <rightSource filePath="%%PROJECT/ROOT_DIRECTORY%%/%%lk_directoryOutput%%/%%lk_batchName%%.BFTBPATD.old.csv">
+                        <sourceRef id="-403aa327:17a38ea241a:-7d5c"
+                            lkname="bftbpatd" lkpath="bftbpatd" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438136440244869" lastKnownName="BFPATD_KABI"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438136440244870" lastKnownName="BFPATD_SOCIETA"/>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="162438136440244872" lastKnownName="BFPATD_PROG"/>
+                        </keyColumns>
+                    </rightSource>
+                    <comparisons>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244873" lastKnownName="BFPATD_TENTITA"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244873" lastKnownName="BFPATD_TENTITA"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244874" lastKnownName="BFPATD_KCONTO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244874" lastKnownName="BFPATD_KCONTO"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244875" lastKnownName="BFPATD_KCONTOD"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244875" lastKnownName="BFPATD_KCONTOD"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244876" lastKnownName="BFPATD_KCLIE"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244876" lastKnownName="BFPATD_KCLIE"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244877" lastKnownName="BFPATD_KUBICAZ"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244877" lastKnownName="BFPATD_KUBICAZ"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244878" lastKnownName="BFPATD_TCONTO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244878" lastKnownName="BFPATD_TCONTO"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244879" lastKnownName="BFPATD_KDIV"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244879" lastKnownName="BFPATD_KDIV"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244880" lastKnownName="BFPATD_DTREG"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244880" lastKnownName="BFPATD_DTREG"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244881" lastKnownName="BFPATD_DTOP"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244881" lastKnownName="BFPATD_DTOP"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244882" lastKnownName="BFPATD_DTVAL"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244882" lastKnownName="BFPATD_DTVAL"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244883" lastKnownName="BFPATD_DTCONT"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244883" lastKnownName="BFPATD_DTCONT"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244884" lastKnownName="BFPATD_DTSTORNO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244884" lastKnownName="BFPATD_DTSTORNO"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244885" lastKnownName="BFPATD_DTSCAD"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244885" lastKnownName="BFPATD_DTSCAD"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244886" lastKnownName="BFPATD_DT239"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244886" lastKnownName="BFPATD_DT239"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244887" lastKnownName="BFPATD_DT378"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244887" lastKnownName="BFPATD_DT378"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244888" lastKnownName="BFPATD_DT461"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244888" lastKnownName="BFPATD_DT461"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244889" lastKnownName="BFPATD_TCORSO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244889" lastKnownName="BFPATD_TCORSO"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="162438136440244890" lastKnownName="BFPATD_CAMBIO"/>
+                            <rightComparisonColumn
+                                lastKnownId="162438136440244890" lastKnownName="BFPATD_CAMBIO"/>
+                        </comparison>
+                    </comparisons>
+                    <logging config="FULL" filename="true"
+                        rowsAfterFilter="true" rowsBeforeFilter="true"
+                        rowsMissingInLhs="true" rowsMissingInRhs="true" rowsWithDifferences="true"/>
+                </resourceConfig>
+                <editableResource id="-47ddb53f:17a1425d6f1:-3ca7"
+                    selfDescribing="Failure Path"
+                    type="failure_path_action" version="1.0">
+                    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                    <resourceConfig description="" name="">
+                        <editableResource
+                            id="-47ddb53f:17a1425d6f1:-3c80"
+                            selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data."
+                            type="function_action" version="1.0">
+                            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                            <resourceConfig description=""
+                                eval_type="Mozilla Rhino"
+                                function="xx_exitCode = 1;" name="Esegui &quot;xx_exitCode = 1;&quot; (2)"/>
+                        </editableResource>
+                    </resourceConfig>
+                </editableResource>
+            </editableResource>
+        </testTree>
+        <initTree>
+            <editableResource id="c83f8bc:176523f35a2:-7645"
+                selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data."
+                type="function_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" eval_type="Mozilla Rhino"
+                    function="xx_exitCode = 0;" name="Esegui &quot;xx_exitCode = 0;&quot;"/>
+            </editableResource>
+        </initTree>
+        <tearDownTree>
+            <editableResource id="c83f8bc:176523f35a2:-758c"
+                selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data."
+                type="decision_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description="" name="xx_exitCode == 0"
+                    option="OTHER" script="xx_exitCode == 0" type="script:ECMAScript">
+                    <true id="c83f8bc:176523f35a2:-758b"
+                        selfDescribing="True"
+                        type="decision_path_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig description="" name="" path="0"/>
+                    </true>
+                    <false id="c83f8bc:176523f35a2:-758a"
+                        selfDescribing="False"
+                        type="decision_path_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig description="" name="" path="1">
+                            <editableResource
+                                id="c83f8bc:176523f35a2:-74f4"
+                                selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console."
+                                type="fail_action" version="1.0">
+                                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                                <resourceConfig append="true"
+                                    description="" flush="true"
+                                    loggingMessage=""
+                                    name="-NESSUN MESSAGGIO DEFINITO-" outputFile=""/>
+                            </editableResource>
+                        </resourceConfig>
+                    </false>
+                </resourceConfig>
+            </editableResource>
+        </tearDownTree>
+        <tagDataStore inputMode="SELECT" outputMode="SELECT">
+            <tag defaultValue="output" description="" name="lk_directoryOutput">
+                <tagProps>
+                    <prop key="interfaceInput" value="true"/>
+                </tagProps>
+            </tag>
+            <tag
+                defaultValue="jbfbxpat01-2021-06-16-12.21.07.036-7ce8e83b-5ebd-4cdf-bf15-99a3577ae27a"
+                description="jbfbxpat00_0000-00-00-00.00.00.000_aaaaaaaa-00a0-00a0-00a0-aaaaaaaaaaaa" name="lk_testName">
+                <tagProps>
+                    <prop key="interfaceInput" value="true"/>
+                </tagProps>
+            </tag>
+            <tag
+                defaultValue="jbfbxpat01-2021-06-16-12.21.07.036-7ce8e83b-5ebd-4cdf-bf15-99a3577ae27a"
+                description="jbfbxpat00_0000-00-00-00.00.00.000_aaaaaaaa-00a0-00a0-00a0-aaaaaaaaaaaa" name="lk_batchName">
+                <tagProps>
+                    <prop key="interfaceInput" value="true"/>
+                </tagProps>
+            </tag>
+            <tag defaultValue="log" description="" name="lk_directoryLog">
+                <tagProps>
+                    <prop key="interfaceInput" value="true"/>
+                </tagProps>
+            </tag>
+            <tag defaultValue="" description="" name="xx_exitCode">
+                <tagProps>
+                    <prop key="interfaceOutput" value="true"/>
+                </tagProps>
+            </tag>
+        </tagDataStore>
+        <testprops messageClearance="false"/>
+    </resourceConfig>
+</editableResource>

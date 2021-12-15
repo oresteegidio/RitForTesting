@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437243064577" createdUser="NL052772" id="67967877:14ea241a195:-7c98" type="test_resource" updatedTimestamp="1437243951079" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="67967877:14ea241a195:-7b97" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% - After 13 seconds I will create %%triggerFile%%&#13;&#10;%%TEST/NAME%% - Wait for 13 seconds..." name="%%TEST/NAME%% - After 13 seconds I will create %%triggerFile%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-7a28" selfDescribing="Repeat test steps a number of times. Each iteration must be explicitly listed e.g. 1,5,7-12." type="repeat_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" disableMappings="false" iterationContributor="false" maxIterationTime="0.0" maxIterationTimeExceededFailsTest="false" maxTotalIterationTime="0.0" maxTotalIterationTimeExceededFailsTest="false" name="1-13" option="NOTHING" pacingtime="1.0" pacingtype="DELAY_BETWEEN_TESTS" performanceDisableValidation="false" performanceInstances="1" performanceInterleave="false" performanceMaximumIterationTime="0" performanceMaximumTestTime="0" performanceUseMaximumIterationTime="false" performanceUseMaximumTestTime="false" remoteAgent="" reportingLogIterations="1" reportingLogLogMessages="8" reportingLogMessages="4" reportingLogScriptExitCodes="8" reportingLogScriptOutput="8" reportingLogTagValues="8" reportingLogTimes="8" runSettingsContinueOnFail="true" runSettingsDelayEnabled="false" runSettingsDelayType="Fixed Delay" runSettingsIterations="1-13" runSettingsMaximumDelayValue="0" runSettingsMinimumDelayValue="0" runSettingsRunFor="0" runSettingsRunType="Once Only" runSettingsTestDescription="" type="script:ECMAScript" useMaxIterationTime="false" useMaxTotalIterationTime="false" usepacing="true">
+               <mapper disableFiltersWhenEmpty="false" knownColumns=""/>
+               <testTree>
+                  <editableResource id="67967877:14ea241a195:-79fa" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% - Waiting for file ... %%TEST/ITERATION/NUMBER%%" name="%%TEST/NAME%% - Waiting for file ... %%TEST/ITERATION/NUMBER%%" outputFile="" role="0"/>
+                  </editableResource>
+               </testTree>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-7c09" selfDescribing="Specify commands, scripts or programs to execute, either locally or on a remote machine.  Optionally specify assertions on the output and/or store it into tags." type="run_command_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig command="echo &gt; %%triggerFile%%" description="" killAfter="Test" killProcess="false" name="&quot;echo &gt; %%triggerFile%%&quot;" waitUntilComplete="true">
+               <remote connectionType="LOCAL" host="" password="#com.ghc.1!aa9a" user="" userType="TAGGED" workingDir=""/>
+               <fieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+               <stdErrFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </stdErrFieldActionGroup>
+               <exitCodeFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </exitCodeFieldActionGroup>
+               <executeUser enabled="false" method="SU"/>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="SELECT" outputMode="SELECT">
+         <tag defaultValue="" description="" name="triggerFile">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+               <prop key="interfaceOutput" value="true"/>
+               <prop key="scopeExecution" value="true"/>
+            </tagProps>
+         </tag>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

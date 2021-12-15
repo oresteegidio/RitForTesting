@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437290534713" createdUser="NL052772" id="438f15eb:14ea4fc7eae:-7856" selfDescribing="%%SYSTEM_PROJECT_ROOT%%/Schema/GetWeatherResult" type="xsd_schema" updatedTimestamp="1437290534713" updatedUser="NL052772" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig schemaSourceTemplateName="XSD">
+      <schemaSourceConfig sourceType="101" uri="%%SYSTEM_PROJECT_ROOT%%/Schema/GetWeatherResult.xsd"/>
+   </resourceConfig>
+</editableResource>

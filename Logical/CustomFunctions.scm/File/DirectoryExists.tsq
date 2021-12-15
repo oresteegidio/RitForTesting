@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437230188773" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-75fa" type="test_resource" updatedTimestamp="1437232971844" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-75b8" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="directoryExists(tags[&quot;PROJECT/ROOT_DIRECTORY&quot;])" option="OTHER" script="directoryExists(tags[&quot;PROJECT/ROOT_DIRECTORY&quot;])" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-75b7" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-75b2" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="DirectoryExists" name="DirectoryExists" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-75b6" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-75ae" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Directory does not exists" name="Directory does not exists" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+   </resourceConfig>
+</editableResource>

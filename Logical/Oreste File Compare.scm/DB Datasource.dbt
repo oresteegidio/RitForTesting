@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621617168357"
+    createdUser="STUART.WALKER" id="1373abdf:1798f1d61a2:-7b91"
+    type="db_test_data" updatedTimestamp="1621617182359"
+    updatedUser="STUART.WALKER" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig autoMapColumns="true" inputData="address1"
+        isQueryBased="false" loop="false" treatEmptyStringAsNull="false"
+        treatTextAsEmpty="false" treatTextAsEmptyValue=""
+        treatTextAsNull="false" treatTextAsNullValue="">
+        <logicaldbserverid id="1373abdf:1798f1d61a2:-7be1" lkname="DB"
+            lkpath="DB" type="infrastructure_component_resource"/>
+    </resourceConfig>
+</editableResource>

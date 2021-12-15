@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438933417640" createdUser="NL052772" id="6160515:14f06f9fbac:-79f8" type="test_resource" updatedTimestamp="1438934584908" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="45f54b70:14f072ae7ba:-7e06" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="false" description="" executeparallel="true" name=" &quot;Actions/RunTest/Choir - Child1&quot; in parallel, parent waits for child to complete" parentWaits="true" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="6160515:14f06f9fbac:-79b2" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="Choir - Child1" lkpath="Actions/RunTest/Choir - Child1"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7df5" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="false" description="" executeparallel="true" name=" &quot;Actions/RunTest/Choir - Child2&quot; in parallel, parent waits for child to complete" parentWaits="true" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="45f54b70:14f072ae7ba:-7e9b" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="Choir - Child2" lkpath="Actions/RunTest/Choir - Child2"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7df1" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="false" description="" executeparallel="true" name=" &quot;Actions/RunTest/Choir - Child3&quot; in parallel, parent waits for child to complete" parentWaits="true" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="45f54b70:14f072ae7ba:-7e81" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="Choir - Child3" lkpath="Actions/RunTest/Choir - Child3"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7ded" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="false" description="" executeparallel="true" name=" &quot;Actions/RunTest/Choir - Child4&quot; in parallel, parent waits for child to complete" parentWaits="true" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="45f54b70:14f072ae7ba:-7e67" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="Choir - Child4" lkpath="Actions/RunTest/Choir - Child4"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7de9" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="false" description="" executeparallel="true" name=" &quot;Actions/RunTest/Choir - Child5&quot; in parallel, parent waits for child to complete" parentWaits="true" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="45f54b70:14f072ae7ba:-7e4d" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="Choir - Child5" lkpath="Actions/RunTest/Choir - Child5"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7c00" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="15000" name="for 15000ms"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+   </resourceConfig>
+</editableResource>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437295411718" createdUser="NL052772" id="438f15eb:14ea4fc7eae:-71b9" type="test_resource" updatedTimestamp="1437295779973" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="438f15eb:14ea4fc7eae:-717b" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="replaced=replaceTags(tag3)" name="Run &quot;replaced=replaceTags(tag3)&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-7177" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Replaced: %%replaced%%" name="Replaced: %%replaced%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-7101" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="replaced==&quot;A comes before B&quot;" option="OTHER" script="replaced==&quot;A comes before B&quot;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="B" description="" name="tag2"/>
+         <tag defaultValue="%%tag1%% comes before %%tag2%%" description="" name="tag3"/>
+         <tag defaultValue="A" description="" name="tag1"/>
+         <tag defaultValue="" description="" name="replaced"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

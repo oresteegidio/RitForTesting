@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437161407181" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-7e70" type="test_resource" updatedTimestamp="1437288123890" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-7e34" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="if (COBOL_parseNumber( &quot;99&quot; )!=&quot;99&quot;) result=&quot;fail&quot;;&#10;&#10;if (COBOL_parseNumber( &quot;+0000012345&quot; )!=&quot;12345&quot;) result=&quot;fail&quot;;&#10;if (COBOL_parseNumber( &quot;-0000012345&quot; )!=&quot;-12345&quot;) result=&quot;fail&quot;;&#10;&#10;if (COBOL_parseNumber( &quot;+00000123,45&quot; )!=&quot;123.45&quot;) result=&quot;fail&quot;;&#10;if (COBOL_parseNumber( &quot;-00000123,45&quot; )!=&quot;-123.45&quot;) result=&quot;fail&quot;;&#10;&#10;if (COBOL_parseNumber( &quot;+00000123.45&quot; )!=&quot;123.45&quot;) result=&quot;fail&quot;;&#10;if (COBOL_parseNumber( &quot;-00000123.45&quot; )!=&quot;-123.45&quot;) result=&quot;fail&quot;;&#10;&#10;" name="Run &quot;if (COBOL_parseNumber( &quot;99&quot; )!=&quot;99&quot;) result=&quot;fail&quot;;&#10;&#10;if (COBOL_parseNumber( &quot;+0000012345&quot; )!=&quot;12345&quot;) result=&quot;fail&quot;;&#10;if (COBOL_parseNumber( &quot;-0000012345&quot; )!=&quot;-12345&quot;) result=&quot;fail&quot;;&#10;&#10;if (COBOL_parseNumber( &quot;+00000123,45&quot; )!=&quot;123.45&quot;) result=&quot;fail&quot;;&#10;if (COBOL_parseNumber( &quot;-00000123,45&quot; )!=&quot;-123.45&quot;) result=&quot;fail&quot;;&#10;&#10;if (COBOL_parseNumber( &quot;+00000123.45&quot; )!=&quot;123.45&quot;) result=&quot;fail&quot;;&#10;if (COBOL_parseNumber( &quot;-00000123.45&quot; )!=&quot;-123.45&quot;) result=&quot;fail&quot;;&#10;&#10;&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-7ce5" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="COBOL_parseNumber( &quot;00000123.45+&quot; )==&quot;123.45&quot;" option="OTHER" script="COBOL_parseNumber( &quot;00000123.45+&quot; )==&quot;123.45&quot;" type="script:ECMAScript"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-7d4c" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="COBOL_parseNumber( &quot;00000123.45-&quot; )==&quot;-123.45&quot;" option="OTHER" script="COBOL_parseNumber( &quot;00000123.45-&quot; )==&quot;-123.45&quot;" type="script:ECMAScript"/>
+            <editableResource id="438f15eb:14ea4fc7eae:-7c90" selfDescribing="Failure Path" type="failure_path_action" version="1.0">
+               <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+               <resourceConfig description="" name="">
+                  <editableResource id="438f15eb:14ea4fc7eae:-7c39" selfDescribing="The comment actions enable you to add notes." type="comment_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="A nice failure path for easy reading results" html="false" name="A nice failure path for easy reading results"/>
+                  </editableResource>
+                  <editableResource id="438f15eb:14ea4fc7eae:-7c8b" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig append="true" description="" flush="true" loggingMessage="COBOL_parseNumber" name="COBOL_parseNumber (2)" outputFile="" role="2"/>
+                  </editableResource>
+               </resourceConfig>
+            </editableResource>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-7c12" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;result&quot;]==&quot;pass&quot;" option="OTHER" script="tags[&quot;result&quot;]==&quot;pass&quot;" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-7c11" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-7c0c" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="COBOL_parseNumber" name="COBOL_parseNumber" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-7c10" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-7c08" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="COBOL_parseNumber" name="COBOL_parseNumber (2)" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="pass" description="" name="result"/>
+         <tag defaultValue="" description="" name="input"/>
+         <tag defaultValue="" description="" name="output"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

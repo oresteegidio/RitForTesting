@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437235048293" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-6082" type="test_resource" updatedTimestamp="1437235410068" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-6046" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="printBinConsole( &quot;IBM Rational Integration Tester&quot; );" name="Run &quot;printBinConsole( &quot;IBM Rational Integration Tester&quot; );&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-602d" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Check the console log. Start RIT with -consoleLog" name="Check the console log. Start RIT with -consoleLog" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="input"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

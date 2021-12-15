@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437303650575" createdUser="NL052772" id="-7be751c9:14ea5f86482:-7e5c" type="test_resource" updatedTimestamp="1437304006685" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="438f15eb:14ea4fc7eae:-687a" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="Set TransactionFile" eval_type="Mozilla Rhino" function="// Might be a good practice to identify a logfile variable base on the testname.&#10;transactionFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\WriteTransactionFile.xml&quot; );&#10;xmlFile=textFileContent( transactionFile );" name="Run &quot;// Might be a good practice to identify a logfile variable base on the testname.&#10;transactionFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\WriteTransactionFile.xml&quot; );&#10;xmlFile=textFileContent( transactionFile );&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6876" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%xmlFile%%" name="%%xmlFile%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6812" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags.result = new java.util.ArrayList();&#10;result.clear();&#10;result=xpath(tags[&quot;xmlFile&quot;],&quot;count(TransactionRequestList/TransactionRequestElement)&quot;)" name="Run &quot;tags.result = new java.util.ArrayList();&#10;result.clear();&#10;result=xpath(tags[&quot;xmlFile&quot;],&quot;count(TransactionRequestList/TransactionRequestElement)&quot;)&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-680c" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%result%%" name="%%result%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-67e1" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="result==3" option="OTHER" script="result==3" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="result"/>
+         <tag defaultValue="" description="" name="transactionFile"/>
+         <tag defaultValue="" description="" name="xmlFile"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437236357297" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-58ed" type="test_resource" updatedTimestamp="1437238898533" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-58b1" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;input&quot;]=&quot;C://RIT-Projecten//CustomFunctions&quot;;&#13;&#10;log(tags[&quot;input&quot;]);&#13;&#10;tags[&quot;input&quot;]=singleSlash(tags[&quot;input&quot;]);&#13;&#10;log(tags[&quot;input&quot;]);" name="Run &quot;tags[&quot;input&quot;]=&quot;C://RIT-Projecten//CustomFunctions&quot;;&#13;&#10;log(tags[&quot;input&quot;]);&#13;&#10;tags[&quot;input&quot;]=singleSlash(tags[&quot;input&quot;]);&#13;&#10;log(tags[&quot;input&quot;]);&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-5884" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;input&quot;]==&quot;C:/RIT-Projecten/CustomFunctions&quot;" option="OTHER" script="tags[&quot;input&quot;]==&quot;C:/RIT-Projecten/CustomFunctions&quot;" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-5883" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-5866" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="SingleSlash" name="SingleSlash" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-5882" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-5862" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="SingleSlash&#10;Input: %%input%%" name="SingleSlash (2)" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="input"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

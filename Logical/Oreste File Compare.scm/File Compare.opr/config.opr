@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621605055599"
+    createdUser="STUART.WALKER" id="1373abdf:1798f1d61a2:-7e95"
+    type="operation_resource" updatedTimestamp="1621605055599"
+    updatedUser="STUART.WALKER" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig avgTime="0" color="167,250,230" dependencies=""
+        maxTime="0" mepEndUsed="true" mepType="IN_OUT" minTime="0"/>
+</editableResource>

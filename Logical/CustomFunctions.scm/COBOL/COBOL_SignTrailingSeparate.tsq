@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437229704184" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-76c4" type="test_resource" updatedTimestamp="1437288852619" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-7e34" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="if (COBOL_SignTrailingSeparate( &quot;12345&quot;, 10 )!=&quot;0000012345+&quot;) result=&quot;fail&quot;;&#10;if (COBOL_SignTrailingSeparate( &quot;-12345&quot;, 10 )!=&quot;0000012345-&quot;) result=&quot;fail&quot;;" name="Run &quot;if (COBOL_SignTrailingSeparate( &quot;12345&quot;, 10 )!=&quot;0000012345+&quot;) result=&quot;fail&quot;;&#10;if (COBOL_SignTrailingSeparate( &quot;-12345&quot;, 10 )!=&quot;0000012345-&quot;) result=&quot;fail&quot;;&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-7c12" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;result&quot;]==&quot;pass&quot;" option="OTHER" script="tags[&quot;result&quot;]==&quot;pass&quot;" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-7c11" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-7c0c" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="COBOL_SignTrailingSeparate" name="COBOL_SignTrailingSeparate" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-7c10" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-7c08" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="COBOL_SignTrailingSeparate" name="COBOL_SignTrailingSeparate (2)" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="pass" description="" name="result"/>
+         <tag defaultValue="" description="" name="input"/>
+         <tag defaultValue="" description="" name="output"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437297870080" createdUser="NL052772" id="438f15eb:14ea4fc7eae:-6afa" type="test_resource" updatedTimestamp="1437297870080" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="438f15eb:14ea4fc7eae:-76ad" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="Set weatherFile" eval_type="Mozilla Rhino" function="// Might be a good practice to identify a logfile variable base on the testname.&#10;WeatherFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\&quot;+tags[&quot;TEST/NAME&quot;]+&quot;.xml&quot; );" name="Run &quot;// Might be a good practice to identify a logfile variable base on the testname.&#10;WeatherFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\&quot;+tags[&quot;TEST/NAME&quot;]+&quot;.xml&quot; );&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-75db" selfDescribing="Specify commands, scripts or programs to execute, either locally or on a remote machine.  Optionally specify assertions on the output and/or store it into tags." type="run_command_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig command="del %%WeatherFile%%" description="" killAfter="Test" killProcess="false" name="&quot;del %%WeatherFile%%&quot;" waitUntilComplete="true">
+               <remote connectionType="LOCAL" host="" password="#com.ghc.1!f0b7" user="" userType="TAGGED" workingDir=""/>
+               <fieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+               <stdErrFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </stdErrFieldActionGroup>
+               <exitCodeFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </exitCodeFieldActionGroup>
+               <executeUser enabled="false" method="SU"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-75ca" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="2000" name="for 2000ms"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-767b" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Location&quot;]=&quot;Amsterdam&quot;;&#10;tags[&quot;Temperature&quot;]=&quot;24C&quot;;&#10;tags[&quot;Status&quot;]=&quot;Sunny Amsterdam!&quot;;" name="Run &quot;tags[&quot;Location&quot;]=&quot;Amsterdam&quot;;&#10;tags[&quot;Temperature&quot;]=&quot;24C&quot;;&#10;tags[&quot;Status&quot;]=&quot;Sunny Amsterdam!&quot;;&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-762c" selfDescribing="Publish a message on a transport. Select the transport, formatter, and define the message content to be sent." type="publish_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" formatter="GH Text" name="&quot;Text&quot; to file &quot;%%WeatherFile%%&quot; using schema &quot;Text&quot; via &quot;TransactionsList&quot;" transport="438f15eb:14ea4fc7eae:-7840">
+               <headerMessage meTy="Message" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="true" enabled="false" ignoreExtra="true" ignoreNonPresent="true" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c meTy="String" name="fileName" type="7" value="%%WeatherFile%%" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="%%WeatherFile%%" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="append" type="8" value="true" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="true" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="createFile" type="8" value="true" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="true" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="newLine" type="8" value="false" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="false" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="closeFile" type="8" value="false" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="false" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+               </headerMessage>
+               <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="true" enabled="false" ignoreExtra="true" ignoreNonPresent="true" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="XML" sch="Text" type="12" version="1.2">
+                     <fieldExpander fieldExpanderID="XML_EXPANDER" fieldSchema="438f15eb:14ea4fc7eae:-7856" fieldSchemaRoot="CurrentWeather">
+                        <property name="XML.cdata" value="false"/>
+                        <property name="XML.space" value="false"/>
+                        <property name="Multi-line indented" value="Multi-line indented"/>
+                        <property name="XML.encoding" value="UTF-8"/>
+                        <property name="XML.declaration" value="true"/>
+                        <property name="XML.nullvalues" value="false"/>
+                        <property name="XML.xmlFormat" value="Multi-line indented"/>
+                        <property name="XML.normalise" value="true"/>
+                     </fieldExpander>
+                     <contentTree>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;CurrentWeather&gt;&#13;
+   &lt;Location&gt;%%Location%%&lt;/Location&gt;&#13;
+   &lt;Time/&gt;&#13;
+   &lt;Wind/&gt;&#13;
+   &lt;Visibility/&gt;&#13;
+   &lt;Temperature&gt;%%Temperature%%&lt;/Temperature&gt;&#13;
+   &lt;DewPoint/&gt;&#13;
+   &lt;RelativeHumidity/&gt;&#13;
+   &lt;Pressure/&gt;&#13;
+   &lt;Status&gt;%%Status%%&lt;/Status&gt;&#13;
+&lt;/CurrentWeather&gt;<defaultActions>
+                           <defaultMessageActions>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction anyOrder="true" enabled="false" ignoreExtra="true" ignoreNonPresent="true" matching="PREFERENCE" type="101"/>
+                                 </fieldAction>
+                                 <fieldAction type="0">
+                                    <fieldAction type="100"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="5"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                           </defaultMessageActions>
+                           <defaultScalarActions>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="0"/>
+                                 </fieldAction>
+                                 <fieldAction type="0">
+                                    <fieldAction type="0"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="5"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                           </defaultScalarActions>
+                        </defaultActions>
+                        <updates>
+                           <updateField path="/text/CurrentWeather">
+                              <_c assocdefid="CurrentWeather"/>
+                           </updateField>
+                           <setAction index="0" path="/text/CurrentWeather/Time/{}" replaceActionType="0" replaceOuterType="0">
+                              <fieldAction type="0">
+                                 <fieldAction type="0"/>
+                              </fieldAction>
+                           </setAction>
+                           <setAction index="0" path="/text/CurrentWeather/Wind/{}" replaceActionType="0" replaceOuterType="0">
+                              <fieldAction type="0">
+                                 <fieldAction type="0"/>
+                              </fieldAction>
+                           </setAction>
+                           <setAction index="0" path="/text/CurrentWeather/Visibility/{}" replaceActionType="0" replaceOuterType="0">
+                              <fieldAction type="0">
+                                 <fieldAction type="0"/>
+                              </fieldAction>
+                           </setAction>
+                           <setAction index="0" path="/text/CurrentWeather/DewPoint/{}" replaceActionType="0" replaceOuterType="0">
+                              <fieldAction type="0">
+                                 <fieldAction type="0"/>
+                              </fieldAction>
+                           </setAction>
+                           <setAction index="0" path="/text/CurrentWeather/RelativeHumidity/{}" replaceActionType="0" replaceOuterType="0">
+                              <fieldAction type="0">
+                                 <fieldAction type="0"/>
+                              </fieldAction>
+                           </setAction>
+                           <setAction index="0" path="/text/CurrentWeather/Pressure/{}" replaceActionType="0" replaceOuterType="0">
+                              <fieldAction type="0">
+                                 <fieldAction type="0"/>
+                              </fieldAction>
+                           </setAction>
+                        </updates>
+                     </contentTree>
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction type="4"/>
+                        </fieldAction>
+                        <fieldAction enabled="false" type="1">
+                           <fieldAction enabled="false" type="7"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+               </bodyMessage>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="WeatherFile"/>
+         <tag defaultValue="" description="" name="Temperature"/>
+         <tag defaultValue="" description="" name="Location"/>
+         <tag defaultValue="" description="" name="Status"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

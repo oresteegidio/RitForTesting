@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1624638826251" createdUser="GGuaita"
+    id="-43dae821:17a438ac9cc:-7d11"
+    selfDescribing="A File located somewhere"
+    type="file_contents_transport" updatedTimestamp="1624888047089"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig transportName="" transportTemplateName="File">
+        <_c directory="%%PROJECT/ROOT_DIRECTORY%%/output/"
+            encoding="UTF-8" fileNamePattern="*.csv"
+            ignoreLastModification="false" lastModificationDelay="0"
+            newLineChoice="Native" packetiserType="AllAvailableBytes" writeEnabled="false">
+            <fileSchemaRef id="64d8a186:17a52d0766e:-7be0"
+                lkname="patt File Schema" lkpath="patt File Schema" type="file_schema"/>
+        </_c>
+    </resourceConfig>
+</editableResource>

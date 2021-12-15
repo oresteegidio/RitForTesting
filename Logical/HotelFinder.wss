@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1600265309398" createdUser="Admin"
+    id="-6e55b030:174973e5173:-7ec2" selfDescribing="HotelFinder"
+    type="wsdl_schema" updatedTimestamp="1600265309398"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig schemaSourceTemplateName="WSDL">
+        <schemaSourceConfig sourceType="102" uri="http://localhost:8090/hotelsWS/services/HotelFinder?wsdl"/>
+    </resourceConfig>
+</editableResource>

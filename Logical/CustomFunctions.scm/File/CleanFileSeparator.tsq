@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437288754274" createdUser="NL052772" id="438f15eb:14ea4fc7eae:-7b2d" type="test_resource" updatedTimestamp="1437289917480" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="438f15eb:14ea4fc7eae:-7aef" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="file=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;////Function\\Samples&quot;;&#10;printBinConsole( file );&#10;file=cleanFileSeparator( file );&#10;printBinConsole( file );&#10;" name="Run &quot;file=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;////Function\\Samples&quot;;&#10;printBinConsole( file );&#10;file=cleanFileSeparator( file );&#10;printBinConsole( file );&#10;&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-7aeb" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="File: %%file%%" name="File: %%file%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-7875" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="// For the constant, the hard specified string on the right hand&#13;&#10;// we have to specify a double backslash for correct interpretation.&#13;&#10;file == &quot;C:\\RIT-Projecten\\CustomFunctions\\Function\\Samples&quot;" option="OTHER" script="// For the constant, the hard specified string on the right hand&#13;&#10;// we have to specify a double backslash for correct interpretation.&#13;&#10;file == &quot;C:\\RIT-Projecten\\CustomFunctions\\Function\\Samples&quot;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="file"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

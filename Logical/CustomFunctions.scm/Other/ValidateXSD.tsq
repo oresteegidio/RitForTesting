@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437296172549" createdUser="NL052772" id="438f15eb:14ea4fc7eae:-6eda" type="test_resource" updatedTimestamp="1437298140650" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="438f15eb:14ea4fc7eae:-6df4" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="Set XSDFile" eval_type="Mozilla Rhino" function="xsdFile=&quot;file:///&quot;+cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\Schema\\GetWeatherResult.xsd&quot; );&#10;docFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\WriteWeatherFile.xml&quot;);" name="Run &quot;xsdFile=&quot;file:///&quot;+cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\Schema\\GetWeatherResult.xsd&quot; );&#10;docFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\WriteWeatherFile.xml&quot;);&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6d25" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="true" description="" executeparallel="false" name=" &quot;CustomFunctions/File/WriteWeatherFile&quot;" parentWaits="false" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="438f15eb:14ea4fc7eae:-6afa" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="WriteWeatherFile" lkpath="CustomFunctions/File/WriteWeatherFile"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6dc6" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%docFile%%&#10;%%xsdFile%%&#10;" name="%%docFile%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6c25" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;docFile&quot;]=textFileContent( tags[&quot;docFile&quot;] );" name="Run &quot;tags[&quot;docFile&quot;]=textFileContent( tags[&quot;docFile&quot;] );&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6dc2" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="result=validateXSD(tags[&quot;docFile&quot;], tags[&quot;xsdFile&quot;] );" name="Run &quot;result=validateXSD(tags[&quot;docFile&quot;], tags[&quot;xsdFile&quot;] );&quot;"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6dbe" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Result: %%result%%" name="Result: %%result%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-6b66" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="validateXSD(tags[&quot;docFile&quot;], tags[&quot;xsdFile&quot;] )" option="OTHER" script="validateXSD(tags[&quot;docFile&quot;], tags[&quot;xsdFile&quot;] )" type="script:ECMAScript">
+               <true id="438f15eb:14ea4fc7eae:-6b65" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="438f15eb:14ea4fc7eae:-6b5e" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="I can work on this file." name="I can work on this file." outputFile="" role="0"/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="438f15eb:14ea4fc7eae:-6b64" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1"/>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="result"/>
+         <tag defaultValue="" description="" name="docFile"/>
+         <tag defaultValue="" description="" name="xsdFile"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

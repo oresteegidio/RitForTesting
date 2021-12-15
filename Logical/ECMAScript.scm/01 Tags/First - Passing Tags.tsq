@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438935803849" createdUser="NL052772" id="45f54b70:14f072ae7ba:-77ce" type="test_resource" updatedTimestamp="1438936700805" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="45f54b70:14f072ae7ba:-7592" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Check Tag definition:&#13;&#10;- Define them as Input/Output&#13;&#10;- Do NOT LIMIT them to the current test" name="Check Tag definition:" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-76f5" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;FirstName&quot;]=&quot;Rational Integration Tester&quot;;" name="Run &quot;tags[&quot;FirstName&quot;]=&quot;Rational Integration Tester&quot;;&quot;"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-76f9" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% - %%FirstName%%" name="%%TEST/NAME%% - %%FirstName%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-76ef" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="true" description="" executeparallel="false" name=" &quot;ECMAScript/01 Tags/Second - Passing Tags&quot; with SecondName(%%FirstName%%), store results in FirstName(%%SecondName%%)" parentWaits="false" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="45f54b70:14f072ae7ba:-7793" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="Second - Passing Tags" lkpath="ECMAScript/01 Tags/Second - Passing Tags"/>
+               <inbound>
+                  <binding key="SecondName" value="%%FirstName%%"/>
+               </inbound>
+               <outbound>
+                  <binding key="FirstName" value="%%SecondName%%"/>
+               </outbound>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7568" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% - %%FirstName%%" name="%%TEST/NAME%% - %%FirstName%% (2)" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="SELECT" outputMode="SELECT">
+         <tag defaultValue="" description="" name="FirstName">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+               <prop key="interfaceOutput" value="true"/>
+               <prop key="scopeExecution" value="true"/>
+            </tagProps>
+         </tag>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

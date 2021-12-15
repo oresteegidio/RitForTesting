@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437310189711" createdUser="NL052772" id="1cda5cff:14ea65c713c:-7ea5" type="simple_test_data" updatedTimestamp="1437311794099" updatedUser="NL052772" version="1.0">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig autoMapColumns="true" columnCount="" datasourceType="Delimited" escapeQuotedString="true" hasColumnNamesLine="true" linesBeforeColumnNames="0" linesToSkip="0" location="%%PROJECT/ROOT_DIRECTORY%%/Test Data/names.txt" loop="false" paddingChar="" parsingType="OffsetLength" separator="tab" treatEmptyStringAsNull="false" treatTextAsNull="false" treatTextAsNullValue="" trim="false"/>
+</editableResource>

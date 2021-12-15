@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437310286511" createdUser="NL052772" id="1cda5cff:14ea65c713c:-7ea2" type="test_resource" updatedTimestamp="1437842285710" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="1cda5cff:14ea65c713c:-7d74" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags.NameList = new java.util.ArrayList(); // tag 'list2' should already have been created in the tag data store dialog.&#13;&#10;tags.IBANList = new java.util.ArrayList();&#13;&#10;NameList.clear(); // This line is needed as assigning a list to a tag will include the existing tag value in the list&#13;&#10;IBANList.clear()" name="Run &quot;tags.NameList = new java.util.ArrayList(); // tag 'list2' should already have been created in the tag data store dialog.&#13;&#10;tags.IBANList = new java.util.ArrayList();&#13;&#10;NameList.clear(); // This line is needed as assigning a list to a tag will include the existing tag value in the list&#13;&#10;IBANList.clear()&quot;"/>
+         </editableResource>
+         <editableResource id="1cda5cff:14ea65c713c:-7e64" selfDescribing="Iterate over a test data set" type="iterate_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" disableMappings="false" groupDataBy="Name" iterationContributor="true" maxIterationTime="0.0" maxIterationTimeExceededFailsTest="false" maxTotalIterationTime="0.0" maxTotalIterationTimeExceededFailsTest="false" name=" over Names" option="NOTHING" pacingtime="0.0" pacingtype="MIN_DURATION" performanceDisableValidation="false" performanceInstances="1" performanceInterleave="false" performanceMaximumIterationTime="0" performanceMaximumTestTime="0" performanceUseMaximumIterationTime="false" performanceUseMaximumTestTime="false" remoteAgent="" reportingLogIterations="1" reportingLogLogMessages="8" reportingLogMessages="4" reportingLogScriptExitCodes="8" reportingLogScriptOutput="8" reportingLogTagValues="8" reportingLogTimes="8" runSettingsContinueOnFail="true" runSettingsDelayEnabled="false" runSettingsDelayType="Fixed Delay" runSettingsIterations="" runSettingsMaximumDelayValue="0" runSettingsMinimumDelayValue="0" runSettingsRunFor="0" runSettingsRunType="Once Only" runSettingsTestDescription="" type="script:ECMAScript" useMaxIterationTime="false" useMaxTotalIterationTime="false" usepacing="false">
+               <testDataSetReference id="1cda5cff:14ea65c713c:-7ea5" lkiconpath="com/ghc/ghTester/images/testdata.png" lkname="Names" lkpath="CustomFunctions/Test Data/Names"/>
+               <mapper disableFiltersWhenEmpty="false" knownColumns="Name,IBAN">
+                  <mapping columnName="Name" tagName="Name" type="4"/>
+                  <mapping tagName="IBANList" type="0"/>
+                  <mapping tagName="NameList" type="0"/>
+                  <mapping columnName="IBAN" tagName="IBAN" type="4"/>
+                  <mapping tagName="NAME" type="0"/>
+                  <mapping tagName="TransactionFile" type="0"/>
+               </mapper>
+               <testTree>
+                  <editableResource id="1cda5cff:14ea65c713c:-7e15" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig append="true" description="" flush="true" loggingMessage="%%Name%% %%IBAN%%" name="%%Name%% %%IBAN%%" outputFile="" role="0"/>
+                  </editableResource>
+                  <editableResource id="1cda5cff:14ea65c713c:-7d6e" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="" eval_type="Mozilla Rhino" function="NameList.add(Name);&#13;&#10;IBANList.add(IBAN);" name="Run &quot;NameList.add(Name);&#13;&#10;IBANList.add(IBAN);&quot;"/>
+                  </editableResource>
+               </testTree>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="1cda5cff:14ea65c713c:-7d6a" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%NameList%%&#13;&#10;%%IBANList%%" name="%%NameList%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="1cda5cff:14ea65c713c:-7b90" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="Set TransactionFile" eval_type="Mozilla Rhino" function="// Might be a good practice to identify a logfile variable base on the testname.&#10;TransactionFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\&quot;+tags[&quot;TEST/NAME&quot;]+&quot;.xml&quot; );" name="Run &quot;// Might be a good practice to identify a logfile variable base on the testname.&#10;TransactionFile=cleanFileSeparator( tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\log\\&quot;+tags[&quot;TEST/NAME&quot;]+&quot;.xml&quot; );&quot;"/>
+         </editableResource>
+         <editableResource id="1cda5cff:14ea65c713c:-7ca5" selfDescribing="Publish a message on a transport. Select the transport, formatter, and define the message content to be sent." type="publish_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" formatter="GH Text" name="&quot;Text&quot; to file &quot;%%TransactionFile%%&quot; using schema &quot;Text&quot; via &quot;TransactionsList&quot;" transport="438f15eb:14ea4fc7eae:-7840">
+               <headerMessage meTy="Message" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="true" enabled="false" ignoreExtra="true" ignoreNonPresent="true" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c meTy="String" name="fileName" type="7" value="%%TransactionFile%%" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="%%TransactionFile%%" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="append" type="8" value="false" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="false" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="createFile" type="8" value="true" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="true" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="newLine" type="8" value="false" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="false" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+                  <_c meTy="Boolean" name="closeFile" type="8" value="false" version="1.2">
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction exp="false" type="0"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+               </headerMessage>
+               <bodyMessage assocdefid="Text" name="Text" sch="Text" type="12" version="1.2">
+                  <fieldActionGroup>
+                     <fieldAction enabled="false" type="1">
+                        <fieldAction anyOrder="true" enabled="false" ignoreExtra="true" ignoreNonPresent="true" type="100"/>
+                     </fieldAction>
+                  </fieldActionGroup>
+                  <_c coreTypeInt="7" coreTypeName="String" name="text" nodeFormatter="XML" sch="Text" type="12" version="1.2">
+                     <fieldExpander fieldExpanderID="XML_EXPANDER" fieldSchema="438f15eb:14ea4fc7eae:-784d" fieldSchemaRoot="TransactionRequestList">
+                        <property name="XML.cdata" value="false"/>
+                        <property name="XML.space" value="false"/>
+                        <property name="Multi-line indented" value="Multi-line indented"/>
+                        <property name="XML.encoding" value="UTF-8"/>
+                        <property name="XML.declaration" value="true"/>
+                        <property name="XML.nullvalues" value="false"/>
+                        <property name="XML.xmlFormat" value="Multi-line indented"/>
+                        <property name="XML.normalise" value="true"/>
+                     </fieldExpander>
+                     <contentTree>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;TransactionRequestList&gt;&#13;
+   &lt;TransactionRequestElement&gt;&#13;
+      &lt;NAME&gt;%%NameList%%&lt;/NAME&gt;&#13;
+      &lt;IBAN&gt;%%IBANList%%&lt;/IBAN&gt;&#13;
+      &lt;VALUE/&gt;&#13;
+   &lt;/TransactionRequestElement&gt;&#13;
+&lt;/TransactionRequestList&gt;<defaultActions>
+                           <defaultMessageActions>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction anyOrder="true" enabled="false" ignoreExtra="true" ignoreNonPresent="true" matching="PREFERENCE" type="101"/>
+                                 </fieldAction>
+                                 <fieldAction type="0">
+                                    <fieldAction type="100"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="5"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                           </defaultMessageActions>
+                           <defaultScalarActions>
+                              <fieldActionGroup>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="0"/>
+                                 </fieldAction>
+                                 <fieldAction type="0">
+                                    <fieldAction type="0"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="5"/>
+                                 </fieldAction>
+                                 <fieldAction enabled="false" type="1">
+                                    <fieldAction enabled="false" type="6" typeActionAllType="true" typeActionMetaType="false"/>
+                                 </fieldAction>
+                              </fieldActionGroup>
+                           </defaultScalarActions>
+                        </defaultActions>
+                        <updates>
+                           <updateField path="/text/TransactionRequestList">
+                              <_c assocdefid="TransactionRequestList"/>
+                           </updateField>
+                           <updateField path="/text/TransactionRequestList/TransactionRequestElement">
+                              <_c repeating="true"/>
+                           </updateField>
+                           <setAction index="0" path="/text/TransactionRequestList/TransactionRequestElement/VALUE/{}" replaceActionType="0" replaceOuterType="0">
+                              <fieldAction type="0">
+                                 <fieldAction type="0"/>
+                              </fieldAction>
+                           </setAction>
+                        </updates>
+                     </contentTree>
+                     <fieldActionGroup>
+                        <fieldAction type="0">
+                           <fieldAction type="4"/>
+                        </fieldAction>
+                        <fieldAction enabled="false" type="1">
+                           <fieldAction enabled="false" type="7"/>
+                        </fieldAction>
+                     </fieldActionGroup>
+                  </_c>
+               </bodyMessage>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7a9c" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Output in transaction file %%TransactionFile%%" name="Output in transaction file %%TransactionFile%%" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="IBANList"/>
+         <tag defaultValue="" description="" name="NameList"/>
+         <tag defaultValue="" description="" name="NAME"/>
+         <tag defaultValue="" description="" name="IBAN"/>
+         <tag defaultValue="" description="" name="Name"/>
+         <tag defaultValue="" description="" name="TransactionFile"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

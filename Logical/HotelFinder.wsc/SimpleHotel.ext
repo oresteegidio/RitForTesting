@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1600281776974" createdUser="Admin"
+    id="-6e55b030:174973e5173:-7767" type="excel_test_data"
+    updatedTimestamp="1600281852977" updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig autoMapColumns="true" hasColumnNamesLine="true"
+        linesBeforeColumnNames="0" linesToSkip="0"
+        location="C:/Progetti/Demo VBooking/SimpleHotel.xlsx"
+        loop="false" sheetName="" treatEmptyStringAsNull="false"
+        treatTextAsEmpty="false" treatTextAsEmptyValue=""
+        treatTextAsNull="false" treatTextAsNullValue=""/>
+</editableResource>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437232378860" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-6c40" type="test_resource" updatedTimestamp="1437232766773" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-6c04" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="var k = new Date();&#13;&#10;tags[&quot;DateNow&quot;] = &quot;&quot;+k.valueOf();&#13;&#10;print( tags[&quot;DateNow&quot;] );&#13;&#10;tags[&quot;DateFormat&quot;] = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#13;&#10;tags[&quot;DateOutput&quot;] = formatSDF(tags[&quot;DateNow&quot;],tags[&quot;DateFormat&quot;]);" name="Run &quot;var k = new Date();&#13;&#10;tags[&quot;DateNow&quot;] = &quot;&quot;+k.valueOf();&#13;&#10;print( tags[&quot;DateNow&quot;] );&#13;&#10;tags[&quot;DateFormat&quot;] = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#13;&#10;tags[&quot;DateOutput&quot;] = formatSDF(tags[&quot;DateNow&quot;],tags[&quot;DateFormat&quot;]);&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6be4" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%DateNow%% = %%DateOutput%%" name="%%DateNow%% = %%DateOutput%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6bbd" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="// 1437232648602 = 2015-07-18 17:17:28&#13;&#10;tags[&quot;DateNow&quot;] = &quot;1437232648602&quot;;&#13;&#10;tags[&quot;DateFormat&quot;] = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#13;&#10;tags[&quot;DateOutput&quot;] = formatSDF(tags[&quot;DateNow&quot;],tags[&quot;DateFormat&quot;]);" name="Run &quot;// 1437232648602 = 2015-07-18 17:17:28&#13;&#10;tags[&quot;DateNow&quot;] = &quot;1437232648602&quot;;&#13;&#10;tags[&quot;DateFormat&quot;] = &quot;yyyy-MM-dd HH:mm:ss&quot;;&#13;&#10;tags[&quot;DateOutput&quot;] = formatSDF(tags[&quot;DateNow&quot;],tags[&quot;DateFormat&quot;]);&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6b92" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;DateOutput&quot;]==&quot;2015-07-18 17:17:28&quot;" option="OTHER" script="tags[&quot;DateOutput&quot;]==&quot;2015-07-18 17:17:28&quot;" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-6b91" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-6b8c" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="FormatSDF" name="FormatSDF" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-6b90" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-6b88" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="FormatSDF" name="FormatSDF (2)" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="DateOutput"/>
+         <tag defaultValue="" description="" name="DateNow"/>
+         <tag defaultValue="" description="" name="DateFormat"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

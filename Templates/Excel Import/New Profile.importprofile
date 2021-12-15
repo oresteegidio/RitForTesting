@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportProfile exampleFilePath="C:/Temp/BFTBPATT.schema.xls"
+    name="New Profile" type="excel">
+    <Rules>
+        <Rule action="SCHEMA_NAME" expression=".*\/(.*)\.schema.xls"
+            match="true" stopAfterMatch="true">
+            <SourceOfContent content="FILENAME" type="fixed"/>
+            <Translations type="string"/>
+        </Rule>
+        <Rule action="NAME_COLUMN" expression="Variabile" match="true" stopAfterMatch="true">
+            <SourceOfContent content="ANY_COLUMN" type="fixed"/>
+            <Translations type="string"/>
+        </Rule>
+        <Rule action="TYPE_COLUMN" expression="Tipo" match="true" stopAfterMatch="true">
+            <SourceOfContent content="ANY_COLUMN" type="fixed"/>
+            <Translations type="string"/>
+        </Rule>
+        <Rule action="LENGTH_COLUMN" expression="Lunchezza" match="true" stopAfterMatch="true">
+            <SourceOfContent content="ANY_COLUMN" type="fixed"/>
+            <Translations type="string"/>
+        </Rule>
+        <Rule action="RUN_COLUMN_MAPPINGS" expression="man" match="true" stopAfterMatch="true">
+            <SourceOfContent content="E" type="column"/>
+            <Translations type="string"/>
+        </Rule>
+    </Rules>
+</ImportProfile>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438680345098" createdUser="NL052772" id="70d24d06:14ef8076dba:-7eac" type="test_resource" updatedTimestamp="1438680669096" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="70d24d06:14ef8076dba:-7e6e" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Source&quot;]=&quot;10&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;]);" name="Run &quot;tags[&quot;Source&quot;]=&quot;10&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;]);&quot;"/>
+         </editableResource>
+         <editableResource id="70d24d06:14ef8076dba:-7e6a" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Source=%%Source%%, radix=10, parseInt(tags[&quot;Source&quot;]) results in %%Target%% (decimal)." name="Source=%%Source%%, radix=10, parseInt(tags[&quot;Source&quot;]) results in %%Target%% (decimal)." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="70d24d06:14ef8076dba:-7e55" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Source&quot;]=&quot;0010&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;]);" name="Run &quot;tags[&quot;Source&quot;]=&quot;0010&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;]);&quot;"/>
+         </editableResource>
+         <editableResource id="70d24d06:14ef8076dba:-7e52" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Source=%%Source%%, radix=8, parseInt(tags[&quot;Source&quot;]) results in %%Target%% (decimal)." name="Source=%%Source%%, radix=8, parseInt(tags[&quot;Source&quot;]) results in %%Target%% (decimal)." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="70d24d06:14ef8076dba:-7e35" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Source&quot;]=&quot;0010&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;],2);" name="Run &quot;tags[&quot;Source&quot;]=&quot;0010&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;],2);&quot;"/>
+         </editableResource>
+         <editableResource id="70d24d06:14ef8076dba:-7e2c" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Source=%%Source%%, radix=2, parseInt(tags[&quot;Source&quot;],2) results in %%Target%% (decimal)." name="Source=%%Source%%, radix=2, parseInt(tags[&quot;Source&quot;],2) results in %%Target%% (decimal)." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="70d24d06:14ef8076dba:-7e2f" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Source&quot;]=&quot;0010&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;],10);" name="Run &quot;tags[&quot;Source&quot;]=&quot;0010&quot;;&#13;&#10;tags[&quot;Target&quot;]=parseInt(tags[&quot;Source&quot;],10);&quot; (2)"/>
+         </editableResource>
+         <editableResource id="70d24d06:14ef8076dba:-7e32" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Source=%%Source%%, radix=10, parseInt(tags[&quot;Source&quot;],10) results in %%Target%% (decimal)." name="Source=%%Source%%, radix=10, parseInt(tags[&quot;Source&quot;],10) results in %%Target%% (decimal)." outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="Target"/>
+         <tag defaultValue="" description="" name="Source"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

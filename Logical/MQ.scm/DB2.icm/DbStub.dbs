@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1600362058824" createdUser="Admin"
+    id="-73c8d160:1749ceb6111:-7dec" type="datbase_stub_resource"
+    updatedTimestamp="1600362060707" updatedUser="Admin" version="1.1">
+    <loggingConfiguration debug="true" writeStubEventsToDB="true"/>
+    <resourceConfig _version="1.1" persistent="false"
+        procCallMode="RETURN_FIRST_MATCH" procErrorMode="FAIL_ON_ERROR">
+        <pass_through autoLearn="false" dml="false" enabled="false"
+            procs="true" tables="true"/>
+    </resourceConfig>
+</editableResource>

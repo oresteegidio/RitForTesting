@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437842838240" createdUser="NL052772" id="-2eedf4e2:14ec5cef4c5:-796f" type="test_resource" updatedTimestamp="1437843184855" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-78fb" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="READ THE CONTENTS OF THIS LOG STATEMENT." flush="true" loggingMessage="See also the article &quot;Using ECMAScript with tags in IBM Rational Integration Tester&quot;&#13;&#10;http://www-01.ibm.com/support/docview.wss?uid=swg21597695&#13;&#10;&#13;&#10;Check also:&#13;&#10;http://business.vanlint5.nl/html2/rit-ecmascript.html" name="See also the article &quot;Using ECMAScript with tags in IBM Rational Integration Tester&quot;" outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+   </resourceConfig>
+</editableResource>

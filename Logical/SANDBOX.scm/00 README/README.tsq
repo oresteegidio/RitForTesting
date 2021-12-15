@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437843054497" createdUser="NL052772" id="-2eedf4e2:14ec5cef4c5:-78ac" type="test_resource" updatedTimestamp="1437843085293" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-78fb" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="READ THE CONTENTS OF THIS LOG STATEMENT." flush="true" loggingMessage="These Tests in the SANDBOX are under development. They might or might not run correctly." name="These Tests in the SANDBOX are under development. They might or might not run correctly." outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+   </resourceConfig>
+</editableResource>

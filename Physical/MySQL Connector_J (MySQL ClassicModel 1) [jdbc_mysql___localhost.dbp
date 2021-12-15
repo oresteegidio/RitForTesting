@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621408272911" createdUser="Admin"
+    id="5b0789f9:1797af1516f:-7ca4"
+    selfDescribing="MySQL Connector/J (MySQL ClassicModel 1) [jdbc:mysql://localhost:3306/classicmodels1, root]"
+    type="database_connection_resource" updatedTimestamp="1621408408493"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig maxConnections="1" poolName="DefaultPoolName" transportName="MySQL ClassicModel 1">
+        <connectionParams ZOSEnv="false"
+            dpsHost="http://&lt;hostname>:&lt;port>/api/v1/profile"
+            dpsPass="#com.ghc.1!c19b" dpsUser=""
+            driverClass="com.mysql.cj.jdbc.Driver"
+            password="#com.ghc.1!daed4475E346A2F97262116655730CAF6A55"
+            schema="" url="jdbc:mysql://localhost:3306/classicmodels1"
+            useSsl="false" user="root">
+            <dpsSsl useSsl="false"/>
+            <stubSettings maxProcCallCount="10000"
+                maxResultSetRowCount="10000" maxRowCount="10000"
+                password="#com.ghc.1!3374"
+                procedureLearningBehaviour="1" schema=""
+                url="jdbc:mysql://localhost:3306/&lt;database name>"
+                useIntegratedDB="true" useSsl="false" user=""/>
+            <storedProcedureFilter catalogFilterEnabled="false"
+                catalogFilterPattern="" procedureFilterEnabled="false"
+                procedureFilterPattern="" schemaFilterEnabled="true"
+                schemaFilterPattern=""
+                storedProceduresRetrievalEnabled="false" useConnectionUsername="true"/>
+            <timestampFormatting timestampFormatZero="false"
+                timestampFormattingEnabled="false" timestampPrecision="9"/>
+        </connectionParams>
+    </resourceConfig>
+</editableResource>

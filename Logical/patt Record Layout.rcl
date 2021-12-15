@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1624887966853" createdUser="Admin"
+    id="64d8a186:17a52d0766e:-7bdf" selfDescribing="patt Record Layout"
+    type="record_layout" updatedTimestamp="1624893310116"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig schemaSourceTemplateName="Record Layout">
+        <schemaSourceConfig layoutType="Delimited" name="patt">
+            <layout>
+                <delimPacketiser encoding="UTF-8" packetiserType="Split" writeEnabled="true">
+                    <packetiserConfig firstSplitOnly="false"
+                        newLine="false" processLastEmptyPacket="false"
+                        splitToken="," splitTokenEncoding="UTF-8" writeLastPacketWithToken="false"/>
+                </delimPacketiser>
+                <delimFields>
+                    <field contentType="Integer" default=""
+                        grouping="false" id="1624887810696874"
+                        inclusion="Mandatory" name="BFPATT_KABI">
+                        <format enabled="true">
+                            <category type="NUMBER">
+                                <category fractionDigits="0" group="false"/>
+                                <custom indefault="false"
+                                    outdefault="false"
+                                    outpattern="###0.00#" type="DECIMAL" use="false">
+                                    <inlocale country="US" language="en" variant=""/>
+                                    <outlocale country="US"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                    <field contentType="String" default=""
+                        grouping="false" id="1624887938116875"
+                        inclusion="Mandatory" name="BFPATT_SOCIETA">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="US" language="en" variant=""/>
+                                    <outlocale country="US"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                </delimFields>
+            </layout>
+        </schemaSourceConfig>
+    </resourceConfig>
+</editableResource>

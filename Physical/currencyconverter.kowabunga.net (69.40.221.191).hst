@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1603304798132" createdUser="Admin"
+    id="540d889e:1754c361690:-7d67"
+    selfDescribing="currencyconverter.kowabunga.net (69.40.221.191)"
+    type="host_machine_resource" updatedTimestamp="1603304798132"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig host_address="69.40.221.191" user_host_name="currencyconverter.kowabunga.net">
+        <roles>
+            <identity name="ssh" port="22"/>
+        </roles>
+    </resourceConfig>
+</editableResource>

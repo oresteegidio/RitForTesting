@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437238944339" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-55d4" type="test_resource" updatedTimestamp="1437239163898" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-5598" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Sleep Test Started...&#10;Sleep for 1 to 2 seconds." name="Sleep Test Started..." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-5594" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="2" maxDelay="2000" minDelay="1000" name="for between 1000 - 2000ms, Gaussian"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-5590" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Sleep now for 3 seconds..." name="Sleep now for 3 seconds..." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-558a" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="// Here we can do some actions...&#13;&#10;&#13;&#10;sleep(3000);&#13;&#10;&#13;&#10;// Here we can continue with actions, without leaving the Function Action." name="Run &quot;// Here we can do some actions...&#13;&#10;&#13;&#10;sleep(3000);&#13;&#10;&#13;&#10;// Here we can continue with actions, without leaving the Function Action.&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-5586" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Sleep Test Ended..." name="Sleep Test Ended..." outputFile="" role="1"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+   </resourceConfig>
+</editableResource>

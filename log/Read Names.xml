@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><TransactionRequestList>
+   <TransactionRequestElement>
+      <NAME>Marc</NAME>
+      <IBAN>BANK-555-111</IBAN>
+      <VALUE/>
+   </TransactionRequestElement>
+   <TransactionRequestElement>
+      <NAME>Gareth</NAME>
+      <IBAN>BANK-555-222</IBAN>
+      <VALUE/>
+   </TransactionRequestElement>
+   <TransactionRequestElement>
+      <NAME>Tanja</NAME>
+      <IBAN>BANK-555-333</IBAN>
+      <VALUE/>
+   </TransactionRequestElement>
+   <TransactionRequestElement>
+      <NAME>Jacky</NAME>
+      <IBAN>BANK-555-444</IBAN>
+      <VALUE/>
+   </TransactionRequestElement>
+   <TransactionRequestElement>
+      <NAME>Jim</NAME>
+      <IBAN>BANK-555-555</IBAN>
+      <VALUE/>
+   </TransactionRequestElement>
+   <TransactionRequestElement>
+      <NAME>Thomas</NAME>
+      <IBAN>BANK-555-666</IBAN>
+      <VALUE/>
+   </TransactionRequestElement>
+   <TransactionRequestElement>
+      <NAME>Kathinka</NAME>
+      <IBAN>BANK-555-777</IBAN>
+      <VALUE/>
+   </TransactionRequestElement>
+</TransactionRequestList>

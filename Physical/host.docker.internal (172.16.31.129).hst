@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1611943106759" createdUser="Admin"
+    id="-2f178e75:1774eeb3b20:-7c66"
+    selfDescribing="host.docker.internal (172.16.31.129)"
+    type="host_machine_resource" updatedTimestamp="1611943106759"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig host_address="172.16.31.129" user_host_name="host.docker.internal">
+        <roles>
+            <identity name="ssh" port="22"/>
+        </roles>
+    </resourceConfig>
+</editableResource>

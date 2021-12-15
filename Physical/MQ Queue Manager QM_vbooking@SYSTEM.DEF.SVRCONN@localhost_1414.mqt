@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1600341356365" createdUser="Admin"
+    id="605fd930:1749bbbd4ca:-7d3c"
+    selfDescribing="MQ Queue Manager QM_vbooking@SYSTEM.DEF.SVRCONN@localhost:1414"
+    type="mq_transport" updatedTimestamp="1600341356365"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig transportName="" transportTemplateName="IBM Websphere MQ">
+        <_c ApplicationName="Integration Tester"
+            ApplicationType="MQSeries Client"
+            Channel="SYSTEM.DEF.SVRCONN" Host="localhost" Password=""
+            Port="1414" QBrowseFirst="" QBrowseNext="" QGetTake=""
+            QOBrowse="" QORead="" QOWrite="" QPut=""
+            QueueManager="QM_vbooking" SSLFipsRequired="false"
+            SSLKeyResetCount="" SSLProtocols="" Username="db2admin"
+            attemptQMReconnect="false" ccdtLocation="" ccdtQmPattern=""
+            connectionConfigType="CHANNEL"
+            connectionManagement="BLANANCED" messagingModelQueue=""
+            messagingModelQueueOpenOptions=""
+            messagingModelQueuePrefix=""
+            messagingModelQueueUseDefault="true" modelQueue=""
+            pcfModelQueue="" pcfModelQueuePrefix=""
+            pcfModelQueueUseDefault="true" prSuffix=".GH" rType="BROWSE"
+            reconnectQMInfiniteRetries="false" reconnectQMMaxRetries=""
+            reconnectQMRetryInterval="" recordingDynamicQueuePrefix=""
+            recordingModelQueueOpenOptions=""
+            recordingTransportDynamicQueuePrefix=""
+            recordingTransportModelQueueOpenOptions=""
+            stubDivertedFixedQueueOpenOptions=""
+            stubDivertedFixedQueueSuffix=".DIVERT"
+            stubDivertedModelQOpenOptions=""
+            stubDivertedUseDefaultModelQ="true"
+            stubDivertedUserModelQ="" stubMode="DIRECT"
+            stubPTQOpenOptions="" stubRepublishOnExit="false"
+            stubStubFixedQueueOpenOptions=""
+            stubStubFixedQueueSuffix=".STUB"
+            stubStubModelQOpenOptions="" stubStubUseDefaultModelQ="true"
+            stubStubUserModelQ="" transportModelQueue=""
+            transportUseDefaultModelQueue="true"
+            treatMQSTRAsBytes="false" useDefaultModelQueue="true"/>
+    </resourceConfig>
+</editableResource>

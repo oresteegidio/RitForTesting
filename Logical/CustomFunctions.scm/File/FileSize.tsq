@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437231602307" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-70d7" type="test_resource" updatedTimestamp="1437231949181" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="154584c1:14e9a8c56a2:-7c5a" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;configfile&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;//config//config.properties&quot;;&#10;" name="Run &quot;tags[&quot;configfile&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;//config//config.properties&quot;;&#10;&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-7152" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Config file: %%configfile%%" name="Config file: %%configfile%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-74a9" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="fileSize( tags[&quot;configfile&quot;] ) == 162" option="OTHER" script="fileSize( tags[&quot;configfile&quot;] ) == 162" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-74a8" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-74a3" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Config.properties is available." name="Config.properties is available." outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-74a7" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-707e" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig description="" eval_type="Mozilla Rhino" function="size=fileSize( tags[&quot;configfile&quot;] );" name="Run &quot;size=fileSize( tags[&quot;configfile&quot;] );&quot;"/>
+                     </editableResource>
+                     <editableResource id="-178c8b0f:14e9d01043d:-749f" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Config.properties size is %%size%% bytes.&#10;Please update you FileSize test." name="Config.properties size is %%size%% bytes." outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="listFiles"/>
+         <tag defaultValue="" description="" name="inputDir"/>
+         <tag defaultValue="" description="" name="configfile"/>
+         <tag defaultValue="" description="" name="file"/>
+         <tag defaultValue="" description="" name="size"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

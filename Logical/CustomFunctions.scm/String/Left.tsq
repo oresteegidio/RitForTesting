@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437157048464" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-7eba" type="test_resource" updatedTimestamp="1437233747221" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-7e7e" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;product&quot;]=&quot;IBM Rational Integration Tester&quot;;&#13;&#10;tags[&quot;output&quot;]=left( tags[&quot;product&quot;] , 12 );" name="Run &quot;tags[&quot;product&quot;]=&quot;IBM Rational Integration Tester&quot;;&#13;&#10;tags[&quot;output&quot;]=left( tags[&quot;product&quot;] , 12 );&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-7e7a" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Output: %%output%%" name="Output: %%output%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-6739" selfDescribing="Choose evaluation expressions to determine test execution flow.  Use predefined functions, custom plug-ins and tagged data." type="decision_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;output&quot;]==&quot;IBM Rational&quot;" option="OTHER" script="tags[&quot;output&quot;]==&quot;IBM Rational&quot;" type="script:ECMAScript">
+               <true id="-178c8b0f:14e9d01043d:-6738" selfDescribing="True" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="0">
+                     <editableResource id="-178c8b0f:14e9d01043d:-66f7" selfDescribing="This action will cause the test to pass. You can use the settings below to log messages to a file and the console." type="pass_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Left" name="Left" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </true>
+               <false id="-178c8b0f:14e9d01043d:-6737" selfDescribing="False" type="decision_path_action" version="1.0">
+                  <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                  <resourceConfig description="" name="" path="1">
+                     <editableResource id="-178c8b0f:14e9d01043d:-66f3" selfDescribing="This action will cause the test to fail. You can use the settings below to log messages to a file and the console." type="fail_action" version="1.0">
+                        <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                        <resourceConfig append="true" description="" flush="true" loggingMessage="Left" name="Left (2)" outputFile=""/>
+                     </editableResource>
+                  </resourceConfig>
+               </false>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="product"/>
+         <tag defaultValue="" description="" name="output"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

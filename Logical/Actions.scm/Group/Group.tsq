@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438932509423" createdUser="NL052772" id="6160515:14f06f9fbac:-7ca6" type="test_resource" updatedTimestamp="1438932987723" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="6160515:14f06f9fbac:-7b43" selfDescribing="The comment actions enable you to add notes." type="comment_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="Check: http://business.vanlint5.nl/html2/rit.html#actiongroup" html="false" name="Check: http://business.vanlint5.nl/html2/rit.html#actiongroup"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE"/>
+   </resourceConfig>
+</editableResource>

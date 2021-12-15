@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1611940240775" createdUser="Admin"
+    id="-2f178e75:1774eeb3b20:-7cf9"
+    selfDescribing="server-143-204-2-15.mxp64.r.cloudfront.net (143.204.2.15)"
+    type="host_machine_resource" updatedTimestamp="1611940240775"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig host_address="143.204.2.15" user_host_name="server-143-204-2-15.mxp64.r.cloudfront.net">
+        <roles>
+            <identity name="ssh" port="22"/>
+        </roles>
+    </resourceConfig>
+</editableResource>

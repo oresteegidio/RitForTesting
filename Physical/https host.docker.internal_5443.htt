@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1611943106082" createdUser="Admin"
+    id="-2f178e75:1774eeb3b20:-7cc3:-1854730389:1544155186"
+    selfDescribing="https host.docker.internal:5443"
+    type="http_transport" updatedTimestamp="1611943106082"
+    updatedUser="Admin" version="1.0">
+    <syncdetails compare="1611943106013" lastSynced="1611943106082" sourceid="-2f178e75:1774eeb3b20:-7cc3"/>
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig transportName="" transportTemplateName="HTTP">
+        <messageProperties
+            ReasonPhrase="No Stub available that matches the request"
+            clientConnectionsPerHost="100" credDomain=""
+            credPassword="#com.ghc.1!9ef5" credPreemptive="false"
+            credType="0" credUser="" httpHost="host.docker.internal"
+            httpNtlmDomain="" httpPort="5443" httpProxyHost=""
+            httpProxyPassword="#com.ghc.1!4b97" httpProxyPort=""
+            httpProxyUsername="" httpServerSocketBindAddressOverride=""
+            httpServerSocketPortOverride="" httpSocketTimeout=""
+            httpTimeoutResponseCode="503" httpVirtualHost=""
+            useSsl="true" version="4">
+            <kerberos Anon="false" CStyle="Username / Password"
+                Conf="false" Custom="true" Enabled="false" Integ="false"
+                MutAuth="false" RepDet="false" SSO="false" SeqCheck="false"/>
+            <oauth clientassertion="" clientid="" clientsecret=""
+                enabled="false" refreshtoken="" scopes="" tokenendpoint=""/>
+        </messageProperties>
+    </resourceConfig>
+</editableResource>

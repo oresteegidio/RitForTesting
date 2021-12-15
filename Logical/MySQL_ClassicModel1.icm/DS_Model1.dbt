@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621415712233" createdUser="Admin"
+    id="54431c28:17983a75b0f:-7779" type="db_test_data"
+    updatedTimestamp="1621415748344" updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig autoMapColumns="true" inputData="customers"
+        isQueryBased="false" loop="false" treatEmptyStringAsNull="false"
+        treatTextAsEmpty="false" treatTextAsEmptyValue=""
+        treatTextAsNull="false" treatTextAsNullValue="">
+        <logicaldbserverid id="5b0789f9:1797af1516f:-7c4a"
+            lkname="MySQL_ClassicModel1" lkpath="MySQL_ClassicModel1" type="infrastructure_component_resource"/>
+    </resourceConfig>
+</editableResource>

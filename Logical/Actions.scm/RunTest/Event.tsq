@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438935110526" createdUser="NL052772" id="45f54b70:14f072ae7ba:-7964" type="test_resource" updatedTimestamp="1438935766283" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="45f54b70:14f072ae7ba:-78c9" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;CountDown&quot;]=30;" name="Run &quot;tags[&quot;CountDown&quot;]=30;&quot;"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-7926" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% - Event Announced.&#13;&#10;%%TEST/NAME%% - It will happen in %%CountDown%% seconds ..." name="%%TEST/NAME%% - Event Announced." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-78dc" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="false" description="" executeparallel="true" name=" &quot;Actions/RunTest/CountDown&quot; in parallel, parent waits for child to complete" parentWaits="true" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="45f54b70:14f072ae7ba:-799f" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="CountDown" lkpath="Actions/RunTest/CountDown"/>
+               <outbound>
+                  <binding key="CountDown" value=""/>
+               </outbound>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-78c3" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% - Waiting for Event." name="%%TEST/NAME%% - Waiting for Event." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-78bf" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="%%CountDown%%" name="for %%CountDown%%ms"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-78bb" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% - Event started ..." name="%%TEST/NAME%% - Event started ..." outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="CountDown">
+            <tagProps>
+               <prop key="scopeExecution" value="true"/>
+            </tagProps>
+         </tag>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

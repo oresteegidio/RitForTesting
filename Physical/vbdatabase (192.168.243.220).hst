@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1600364119087" createdUser="Admin"
+    id="-3dae6731:1749d1f5857:-7e4b"
+    selfDescribing="vbdatabase (192.168.243.220)"
+    type="host_machine_resource" updatedTimestamp="1600364119087"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig host_address="192.168.243.220" user_host_name="vbdatabase">
+        <roles>
+            <identity name="ssh" port="22"/>
+        </roles>
+    </resourceConfig>
+</editableResource>

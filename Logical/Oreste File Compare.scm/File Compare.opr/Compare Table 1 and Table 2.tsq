@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621605067232"
+    createdUser="STUART.WALKER" id="1373abdf:1798f1d61a2:-7e82"
+    type="test_resource" updatedTimestamp="1621607062943"
+    updatedUser="STUART.WALKER" version="1.1">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig description="" name="">
+        <testTree>
+            <editableResource id="1373abdf:1798f1d61a2:-7e12"
+                selfDescribing="Compares two logical file sources (both of which may be directories containing files) containing record data according to the configuration you set-up."
+                type="file_compare_action" version="1.0">
+                <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                <resourceConfig description=""
+                    name="File 1 against File 2"
+                    reportingMissinLeft="true" reportingMissingRight="true">
+                    <leftSource filePath="%%PROJECT/ROOT%%/address data 3.csv">
+                        <sourceRef id="1373abdf:1798f1d61a2:-7e1c"
+                            lkname="File 1"
+                            lkpath="Oreste DB Compare/File 1" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="16216058427722" lastKnownName="address_id"/>
+                        </keyColumns>
+                    </leftSource>
+                    <rightSource filePath="%%PROJECT/ROOT%%/address data 3.csv">
+                        <sourceRef id="1373abdf:1798f1d61a2:-7e19"
+                            lkname="File 2"
+                            lkpath="Oreste DB Compare/File 2" type="file_contents_transport"/>
+                        <keyColumns>
+                            <keyColumn isPhysicalRecord="true"
+                                lastKnownId="16216058427722" lastKnownName="address_id"/>
+                        </keyColumns>
+                    </rightSource>
+                    <comparisons>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="16216058511273" lastKnownName="adrress"/>
+                            <rightComparisonColumn
+                                lastKnownId="16216058511273" lastKnownName="adrress"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="16216058552224" lastKnownName="address2"/>
+                            <rightComparisonColumn
+                                lastKnownId="16216058552224" lastKnownName="address2"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="16216059019395" lastKnownName="district"/>
+                            <rightComparisonColumn
+                                lastKnownId="16216059019395" lastKnownName="district"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="16216059074896" lastKnownName="city_id"/>
+                            <rightComparisonColumn
+                                lastKnownId="16216059074896" lastKnownName="city_id"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="16216059138417" lastKnownName="postal_code"/>
+                            <rightComparisonColumn
+                                lastKnownId="16216059138417" lastKnownName="postal_code"/>
+                        </comparison>
+                        <comparison comparisonType="EQUALITY">
+                            <leftComparisonColumn
+                                lastKnownId="16216059195868" lastKnownName="phone"/>
+                            <rightComparisonColumn
+                                lastKnownId="16216059195868" lastKnownName="phone"/>
+                        </comparison>
+                    </comparisons>
+                    <logging config="FULL" filename="true"
+                        rowsAfterFilter="true" rowsBeforeFilter="true"
+                        rowsMissingInLhs="true" rowsMissingInRhs="true" rowsWithDifferences="true"/>
+                </resourceConfig>
+            </editableResource>
+        </testTree>
+        <tagDataStore inputMode="NONE" outputMode="NONE"/>
+        <testprops messageClearance="false"/>
+    </resourceConfig>
+</editableResource>

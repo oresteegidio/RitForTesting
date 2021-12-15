@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437242329704" createdUser="NL052772" id="67967877:14ea241a195:-7e60" type="test_resource" updatedTimestamp="1437243825733" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="67967877:14ea241a195:-7d23" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;triggerFile&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\go.txt&quot;;" name="Run &quot;tags[&quot;triggerFile&quot;]=tags[&quot;PROJECT/ROOT_DIRECTORY&quot;]+&quot;\\go.txt&quot;;&quot;"/>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-7d1d" selfDescribing="Specify commands, scripts or programs to execute, either locally or on a remote machine.  Optionally specify assertions on the output and/or store it into tags." type="run_command_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig command="del %%triggerFile%%" description="" killAfter="Test" killProcess="false" name="&quot;del %%triggerFile%%&quot;" waitUntilComplete="true">
+               <remote connectionType="LOCAL" host="" password="#com.ghc.1!c665" user="" userType="TAGGED" workingDir=""/>
+               <fieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </fieldActionGroup>
+               <stdErrFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </stdErrFieldActionGroup>
+               <exitCodeFieldActionGroup>
+                  <fieldAction enabled="false" type="1">
+                     <fieldAction enabled="false" type="0"/>
+                  </fieldAction>
+               </exitCodeFieldActionGroup>
+               <executeUser enabled="false" method="SU"/>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-79ae" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="After 5 seconds an other parallel test will be started.&#13;&#10;That test will create a file after 13 seconds." name="After 5 seconds an other parallel test will be started." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-7d19" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="5000" name="for 5000ms (2)"/>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-7c99" selfDescribing="Execute a test as a sub-test.  Pass and return data using interface tags." type="execute_resource_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig childExits="true" description="" executeparallel="true" name=" &quot;All Tests/CreateTriggerFile&quot; in parallel with triggerFile(%%triggerFile%%), child exits when parent completes" parentWaits="false" subDefault="true" subIndependent="false" subShared="false">
+               <executeReference id="67967877:14ea241a195:-7c98" lkiconpath="com/ghc/ghTester/images/testsmall.gif" lkname="CreateTriggerFile" lkpath="All Tests/CreateTriggerFile"/>
+               <inbound>
+                  <binding key="triggerFile" value="%%triggerFile%%"/>
+               </inbound>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-7e20" selfDescribing="Repeat test steps while a specified condition is true." type="iterate_while_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" disableMappings="false" iterationContributor="false" maxIterationTime="0.0" maxIterationTimeExceededFailsTest="false" maxTotalIterationTime="0.0" maxTotalIterationTimeExceededFailsTest="false" name="not ( fileExists(tags[&quot;triggerFile&quot;]) )" option="OTHER" pacingtime="0.0" pacingtype="MIN_DURATION" performanceDisableValidation="false" performanceInstances="1" performanceInterleave="false" performanceMaximumIterationTime="0" performanceMaximumTestTime="0" performanceUseMaximumIterationTime="false" performanceUseMaximumTestTime="false" remoteAgent="" reportingLogIterations="1" reportingLogLogMessages="8" reportingLogMessages="4" reportingLogScriptExitCodes="8" reportingLogScriptOutput="8" reportingLogTagValues="8" reportingLogTimes="8" runSettingsContinueOnFail="true" runSettingsDelayEnabled="false" runSettingsDelayType="Fixed Delay" runSettingsIterations="" runSettingsMaximumDelayValue="0" runSettingsMinimumDelayValue="0" runSettingsRunFor="0" runSettingsRunType="Once Only" runSettingsTestDescription="" script="not ( fileExists(tags[&quot;triggerFile&quot;]) )" type="script:ECMAScript" useMaxIterationTime="false" useMaxTotalIterationTime="false" usepacing="false">
+               <mapper disableFiltersWhenEmpty="false" knownColumns=""/>
+               <testTree>
+                  <editableResource id="67967877:14ea241a195:-7df0" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="1000" name="for 1000ms"/>
+                  </editableResource>
+                  <editableResource id="67967877:14ea241a195:-7dec" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig append="true" description="" flush="true" loggingMessage="%%TEST/NAME%% Waiting for %%triggerFile%%..." name="%%TEST/NAME%% Waiting for %%triggerFile%%..." outputFile="" role="0"/>
+                  </editableResource>
+               </testTree>
+            </resourceConfig>
+         </editableResource>
+         <editableResource id="67967877:14ea241a195:-7a2c" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Yes. File %%triggerFile%% was there ..." name="Yes. File %%triggerFile%% was there ..." outputFile="" role="0"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="SELECT" outputMode="SELECT">
+         <tag defaultValue="" description="" name="triggerFile">
+            <tagProps>
+               <prop key="interfaceInput" value="true"/>
+               <prop key="interfaceOutput" value="true"/>
+               <prop key="scopeExecution" value="true"/>
+            </tagProps>
+         </tag>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437225915070" createdUser="NL052772" id="-178c8b0f:14e9d01043d:-7b35" type="test_resource" updatedTimestamp="1437287771216" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="-178c8b0f:14e9d01043d:-7e34" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;input&quot;]=&quot;99&quot;;&#13;&#10;tags[&quot;output&quot;]=COBOL_Integer( tags[&quot;input&quot;] , 5 );" name="Run &quot;tags[&quot;input&quot;]=&quot;99&quot;;&#13;&#10;tags[&quot;output&quot;]=COBOL_Integer( tags[&quot;input&quot;] , 5 );&quot;"/>
+         </editableResource>
+         <editableResource id="-178c8b0f:14e9d01043d:-7e1e" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Output: %%output%%" name="Output: %%output%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="438f15eb:14ea4fc7eae:-7dd3" selfDescribing="Choose evaluation expressions to determine test execution flow. Use predefined functions, custom plug-ins and tagged data. If the functions pass then the test will continue to execute; otherwise the test will fail." type="assert_true_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" name="tags[&quot;output&quot;]==&quot;00099&quot; (2)" option="OTHER" script="tags[&quot;output&quot;]==&quot;00099&quot;" type="script:ECMAScript"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="input"/>
+         <tag defaultValue="" description="" name="output"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

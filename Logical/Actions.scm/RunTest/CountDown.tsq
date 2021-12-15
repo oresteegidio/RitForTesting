@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1438935095384" createdUser="NL052772" id="45f54b70:14f072ae7ba:-799f" type="test_resource" updatedTimestamp="1438935566149" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="45f54b70:14f072ae7ba:-78ee" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;MyCounter&quot;]=tags[&quot;CountDown&quot;];&#10;print ( &quot; Waiting for &quot; + MyCounter + &quot; seconds &quot;);&#10;" name="Run &quot;tags[&quot;MyCounter&quot;]=tags[&quot;CountDown&quot;];&#10;print ( &quot; Waiting for &quot; + MyCounter + &quot; seconds &quot;);&#10;&quot;"/>
+         </editableResource>
+         <editableResource id="45f54b70:14f072ae7ba:-791e" selfDescribing="Repeat test steps while a specified condition is true." type="iterate_while_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" disableMappings="false" iterationContributor="false" maxIterationTime="0.0" maxIterationTimeExceededFailsTest="false" maxTotalIterationTime="0.0" maxTotalIterationTimeExceededFailsTest="false" name="tags[&quot;MyCounter&quot;] &gt; 0" option="OTHER" pacingtime="0.0" pacingtype="MIN_DURATION" performanceDisableValidation="false" performanceInstances="1" performanceInterleave="false" performanceMaximumIterationTime="0" performanceMaximumTestTime="0" performanceUseMaximumIterationTime="false" performanceUseMaximumTestTime="false" remoteAgent="" reportingLogIterations="1" reportingLogLogMessages="8" reportingLogMessages="4" reportingLogScriptExitCodes="8" reportingLogScriptOutput="8" reportingLogTagValues="8" reportingLogTimes="8" runSettingsContinueOnFail="true" runSettingsDelayEnabled="false" runSettingsDelayType="Fixed Delay" runSettingsIterations="" runSettingsMaximumDelayValue="0" runSettingsMinimumDelayValue="0" runSettingsRunFor="0" runSettingsRunType="Once Only" runSettingsTestDescription="" script="tags[&quot;MyCounter&quot;] &gt; 0" type="script:ECMAScript" useMaxIterationTime="false" useMaxTotalIterationTime="false" usepacing="false">
+               <mapper disableFiltersWhenEmpty="false" knownColumns=""/>
+               <testTree>
+                  <editableResource id="45f54b70:14f072ae7ba:-78e8" selfDescribing="Suspend execution of the test for a specified period (in milliseconds).  The delay may be fixed or random." type="sleep_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="" distributionType="0" maxDelay="0" minDelay="1000" name="for 1000ms"/>
+                  </editableResource>
+                  <editableResource id="45f54b70:14f072ae7ba:-78e4" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig append="true" description="" flush="true" loggingMessage="%%MyCounter%%" name="%%MyCounter%%" outputFile="" role="0"/>
+                  </editableResource>
+                  <editableResource id="45f54b70:14f072ae7ba:-78e0" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+                     <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+                     <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;MyCounter&quot;]=tags[&quot;MyCounter&quot;]-1;" name="Run &quot;tags[&quot;MyCounter&quot;]=tags[&quot;MyCounter&quot;]-1;&quot;"/>
+                  </editableResource>
+               </testTree>
+            </resourceConfig>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="CountDown">
+            <tagProps>
+               <prop key="scopeExecution" value="true"/>
+            </tagProps>
+         </tag>
+         <tag defaultValue="" description="" name="MyCounter"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>

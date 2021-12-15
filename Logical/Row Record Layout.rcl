@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621605929297"
+    createdUser="STUART.WALKER" id="1373abdf:1798f1d61a2:-7e27"
+    selfDescribing="Row Record Layout" type="record_layout"
+    updatedTimestamp="1621605929297" updatedUser="STUART.WALKER" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig schemaSourceTemplateName="Record Layout">
+        <schemaSourceConfig layoutType="Delimited" name="Row">
+            <layout>
+                <delimPacketiser encoding="UTF-8" packetiserType="Split" writeEnabled="true">
+                    <packetiserConfig firstSplitOnly="false"
+                        newLine="false" processLastEmptyPacket="false"
+                        splitToken="," splitTokenEncoding="UTF-8" writeLastPacketWithToken="false"/>
+                </delimPacketiser>
+                <delimFields>
+                    <field contentType="String" default=""
+                        grouping="false" id="16216058427722"
+                        inclusion="Mandatory" name="address_id">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="GB" language="en" variant=""/>
+                                    <outlocale country="GB"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                    <field contentType="String" default=""
+                        grouping="false" id="16216058511273"
+                        inclusion="Mandatory" name="adrress">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="GB" language="en" variant=""/>
+                                    <outlocale country="GB"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                    <field contentType="String" default=""
+                        grouping="false" id="16216058552224"
+                        inclusion="Mandatory" name="address2">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="GB" language="en" variant=""/>
+                                    <outlocale country="GB"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                    <field contentType="String" default=""
+                        grouping="false" id="16216059019395"
+                        inclusion="Mandatory" name="district">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="GB" language="en" variant=""/>
+                                    <outlocale country="GB"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                    <field contentType="String" default=""
+                        grouping="false" id="16216059074896"
+                        inclusion="Mandatory" name="city_id">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="GB" language="en" variant=""/>
+                                    <outlocale country="GB"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                    <field contentType="String" default=""
+                        grouping="false" id="16216059138417"
+                        inclusion="Mandatory" name="postal_code">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="GB" language="en" variant=""/>
+                                    <outlocale country="GB"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                    <field contentType="String" default=""
+                        grouping="false" id="16216059195868"
+                        inclusion="Mandatory" name="phone">
+                        <format enabled="true">
+                            <category type="STRING">
+                                <custom indefault="false"
+                                    outdefault="false" outpattern="%1$s"
+                                    type="STRING" use="false">
+                                    <inlocale country="GB" language="en" variant=""/>
+                                    <outlocale country="GB"
+                                    language="en" variant=""/>
+                                </custom>
+                            </category>
+                            <common customLength="0"
+                                isCustomLength="true"
+                                justification="LEFT" left=" " right=" " trim="false"/>
+                        </format>
+                    </field>
+                </delimFields>
+            </layout>
+        </schemaSourceConfig>
+    </resourceConfig>
+</editableResource>

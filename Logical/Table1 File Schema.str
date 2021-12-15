@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1621605775920"
+    createdUser="STUART.WALKER" id="1373abdf:1798f1d61a2:-7e36"
+    selfDescribing="Table1 File Schema" type="file_schema"
+    updatedTimestamp="1621606125240" updatedUser="STUART.WALKER" version="2.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig schemaSourceTemplateName="File Schema">
+        <schemaSourceConfig name="Table1" packetsToIgnoreAtStart="0">
+            <settings packetiserType="Split" writeEnabled="true">
+                <packetiserConfig firstSplitOnly="false" newLine="true"
+                    processLastEmptyPacket="false" splitToken="" writeLastPacketWithToken="false"/>
+            </settings>
+            <record id="480f9700-ec39-4d74-9698-f4e4ee87e4ca"
+                nodeFormatterID="record_layout" rootID="Record" schemaID="1373abdf:1798f1d61a2:-7e27"/>
+        </schemaSourceConfig>
+    </resourceConfig>
+</editableResource>

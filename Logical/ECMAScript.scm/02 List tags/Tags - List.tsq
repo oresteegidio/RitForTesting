@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><editableResource createdTimestamp="1437315568585" createdUser="NL052772" id="1cda5cff:14ea65c713c:-7a8a" type="test_resource" updatedTimestamp="1437838920025" updatedUser="NL052772" version="1.1">
+   <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+   <resourceConfig description="" name="">
+      <testTree>
+         <editableResource id="1cda5cff:14ea65c713c:-7a4c" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="tags[&quot;Tag/Size&quot;]=tags.size();" name="Run &quot;tags[&quot;Tag/Size&quot;]=tags.size();&quot;"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7d0e" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="Number of tags: %%Tag/Size%%" name="Number of tags: %%Tag/Size%%" outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="1cda5cff:14ea65c713c:-7a0a" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function="print( tags );" name="Run &quot;print( tags );&quot;"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7ca7" selfDescribing="The log actions enables you to output messages to console and a logging file." type="logging_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig append="true" description="" flush="true" loggingMessage="A great way to iterate across the available tags." name="A great way to iterate across the available tags." outputFile="" role="0"/>
+         </editableResource>
+         <editableResource id="-2eedf4e2:14ec5cef4c5:-7e2f" selfDescribing="Execute a function and optionally tag the results. Use predefined functions, custom plug-ins and tagged data." type="function_action" version="1.0">
+            <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+            <resourceConfig description="" eval_type="Mozilla Rhino" function=" // Sort into a new map&#13;&#10;var sortedTags = new java.util.TreeMap(tags);&#13;&#10;// Get a map of names&#13;&#10;var completeList = sortedTags.keySet();&#13;&#10;// Create an iterator object&#13;&#10;var iter = completeList.iterator();&#13;&#10;&#13;&#10;while(iter.hasNext()){&#13;&#10;    // Get the next name&#13;&#10;    var name = iter.next();&#13;&#10;    print(name + &quot; --&gt;&gt; &quot;);&#13;&#10;    print(sortedTags.get(name) + &quot;\n&quot;);&#13;&#10;} " name="Run &quot; // Sort into a new map&#13;&#10;var sortedTags = new java.util.TreeMap(tags);&#13;&#10;// Get a map of names&#13;&#10;var completeList = sortedTags.keySet();&#13;&#10;// Create an iterator object&#13;&#10;var iter = completeList.iterator();&#13;&#10;&#13;&#10;while(iter.hasNext()){&#13;&#10;    // Get the next name&#13;&#10;    var name = iter.next();&#13;&#10;    print(name + &quot; --&gt;&gt; &quot;);&#13;&#10;    print(sortedTags.get(name) + &quot;\n&quot;);&#13;&#10;} &quot;"/>
+         </editableResource>
+      </testTree>
+      <tagDataStore inputMode="NONE" outputMode="NONE">
+         <tag defaultValue="" description="" name="OUTPUT/TRANSACTION/VALUE"/>
+         <tag defaultValue="" description="" name="Tag/Size"/>
+         <tag defaultValue="" description="" name="number"/>
+         <tag defaultValue="777-888-999" description="" name="INPUT/TRANSACTION/IBAN"/>
+         <tag defaultValue="SMITH" description="" name="INPUT/TRANSACTION/NAME"/>
+         <tag defaultValue="Data" description="" name="ZZZZSomething"/>
+         <tag defaultValue="" description="" name="Street"/>
+         <tag defaultValue="" description="" name="OUTPUT/TRANSACTION/NAME"/>
+         <tag defaultValue="" description="" name="OUTPUT/TRANSACTION/IBAN"/>
+         <tag defaultValue="10" description="" name="INPUT/TRANSACTION/VALUE"/>
+         <tag defaultValue="" description="" name="list"/>
+         <tag defaultValue="" description="" name="City"/>
+         <tag defaultValue="" description="" name="Name"/>
+      </tagDataStore>
+   </resourceConfig>
+</editableResource>
