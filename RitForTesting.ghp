@@ -11,14 +11,14 @@
         <dbConnectionParameters maxConnections="1" poolName="DefaultPoolName">
             <connectionParams ZOSEnv="false"
                 dpsHost="http://&lt;hostname>:&lt;port>/api/v1/profile"
-                dpsPass="#com.ghc.1!4eb2" dpsUser=""
+                dpsPass="#com.ghc.1!e9d7" dpsUser=""
                 driverClass="com.mysql.cj.jdbc.Driver"
-                password="#com.ghc.1!a09955330CBC6A4240F321097E43128F4AC9"
+                password="#com.ghc.1!dbd74475E346A2F97262116655730CAF6A55"
                 url="jdbc:mysql://localhost:3306/Result" user="root">
                 <dpsSsl useSsl="false"/>
                 <stubSettings maxProcCallCount="10000"
                     maxResultSetRowCount="10000" maxRowCount="10000"
-                    password="#com.ghc.1!7e01"
+                    password="#com.ghc.1!94a7"
                     procedureLearningBehaviour="1" schema="" url=""
                     useIntegratedDB="true" useSsl="false" user=""/>
                 <storedProcedureFilter catalogFilterEnabled="false"
@@ -31,10 +31,11 @@
                     timestampFormattingEnabled="false" timestampPrecision="9"/>
             </connectionParams>
         </dbConnectionParameters>
-        <automationServer enabled="false" hostname="" port="443"
-            projectId="-1" projectName="--No Project Selected--"
+        <automationServer enabled="true"
+            hostname="hcl-onetest.sbx0196.play.hclsofy.com" port="443"
+            projectId="1200" projectName="ForTest"
             publishResults="false" trustSource="TRUST_ALL"
-            trustStorePassword="#com.ghc.1!15df" trustStorePath=""/>
+            trustStorePassword="#com.ghc.1!9877" trustStorePath=""/>
     </serverSettings>
     <permissionsSettings autoLogin="true" host="DESKTOP-G13Q323"
         permFactId="ldap.permissions.factory.none" port="389" pswd="i0sbZ/A3mTn4WfCV4iimYb4AhZjEBvk0ExqYuWz7rdQ=$VUto/1Nizn65jsqwg11dqpAzCzWC7eLS0aCQ1+1Gv0g="/>

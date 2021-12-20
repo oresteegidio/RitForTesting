@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1639749669283" createdUser="Admin"
+    id="7fa6c00a:17dc8a7fd16:-7cb2" selfDescribing="AWPricingWSPortType"
+    syncSourceDetails="3e216f8f:174070dbaea:-7f69"
+    type="wsdl_service_component" updatedTimestamp="1639749669299"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig>
+        <wsdl id="7fa6c00a:17dc8a7fd16:-7c8d" name="AWPricingWSPortType"/>
+        <wsdl id="7fa6c00a:17dc8a7fd16:-7cb3" name="AWPricingWS"/>
+    </resourceConfig>
+</editableResource>

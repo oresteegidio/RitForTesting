@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1639749669267" createdUser="Admin"
+    id="7fa6c00a:17dc8a7fd16:-7c8d" selfDescribing="AWPricingWSPortType"
+    type="wsdl_schema" updatedTimestamp="1639749669267"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig schemaSourceTemplateName="WSDL">
+        <schemaSourceConfig sourceType="101" uri="C:\Users\Admin\Desktop\AWPricingWSPortType.wsdl"/>
+    </resourceConfig>
+</editableResource>

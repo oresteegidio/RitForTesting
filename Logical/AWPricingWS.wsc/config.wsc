@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1639749097199" createdUser="Admin"
+    id="7fa6c00a:17dc8a7fd16:-7dd2" selfDescribing="AWPricingWS"
+    syncSourceDetails="3e216f8f:174070dbaea:-7f69"
+    type="wsdl_service_component" updatedTimestamp="1639749097215"
+    updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig>
+        <wsdl id="7fa6c00a:17dc8a7fd16:-7dd3" name="AWPricingWS"/>
+    </resourceConfig>
+</editableResource>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1639984157413" createdUser="Admin"
+    id="-1aef574e:17dd6a75da1:-7d7e"
+    selfDescribing="3.66.136.156 - http localhost" type="http_transport"
+    updatedTimestamp="1639984157413" updatedUser="Admin" version="1.0">
+    <loggingConfiguration debug="false" writeStubEventsToDB="false"/>
+    <resourceConfig transportName="3.66.136.156" transportTemplateName="HTTP"/>
+</editableResource>
